@@ -2,6 +2,7 @@
 
 ## Requirements
 
+* Oval.framework (Lattis networking API)
 * CommonCrypto.framework
 * [KeychainSwift](https://github.com/evgenyneu/keychain-swift.git)
 

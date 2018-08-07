@@ -1,0 +1,11 @@
+framework module Oval {
+  umbrella header "Oval.h"
+
+  export *
+  module * { export * }
+}
+
+module Oval.Swift {
+    header "Oval-Swift.h"
+    requires objc
+}

@@ -19,6 +19,8 @@
 		F17AAA63202657FE0062A679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17AAA60202657FE0062A679 /* ViewController.swift */; };
 		F17AAA64202657FE0062A679 /* PinCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17AAA61202657FE0062A679 /* PinCodeViewController.swift */; };
 		F17AAA66202658080062A679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17AAA65202658080062A679 /* Main.storyboard */; };
+		F1F3ADA12119EA21005F8A0D /* Oval.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F3ADA02119EA21005F8A0D /* Oval.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F1F3ADA32119EA2F005F8A0D /* Oval.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1F3ADA02119EA21005F8A0D /* Oval.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +32,7 @@
 			files = (
 				F17AAA5E2026573C0062A679 /* CommonCrypto.framework in Embed Frameworks */,
 				F17AAA5B202657380062A679 /* LattisSDK.framework in Embed Frameworks */,
+				F1F3ADA32119EA2F005F8A0D /* Oval.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +54,7 @@
 		F17AAA60202657FE0062A679 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F17AAA61202657FE0062A679 /* PinCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeViewController.swift; sourceTree = "<group>"; };
 		F17AAA65202658080062A679 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F1F3ADA02119EA21005F8A0D /* Oval.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Oval.framework; path = ../../Oval.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F3ADA12119EA21005F8A0D /* Oval.framework in Frameworks */,
 				F17AAA5D2026573C0062A679 /* CommonCrypto.framework in Frameworks */,
 				F17AAA5A202657380062A679 /* LattisSDK.framework in Frameworks */,
 				57C9BAF2D725E8EB18BCB723 /* Pods_Lattis_Demo.framework in Frameworks */,
@@ -105,6 +110,7 @@
 		F17AAA43202657010062A679 /* Lattis Demo */ = {
 			isa = PBXGroup;
 			children = (
+				F1F3ADA02119EA21005F8A0D /* Oval.framework */,
 				F17AAA58202657200062A679 /* CommonCrypto.framework */,
 				F17AAA562026571A0062A679 /* LattisSDK.framework */,
 				F17AAA44202657010062A679 /* AppDelegate.swift */,
@@ -150,7 +156,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Lattis Inc.";
 				TargetAttributes = {
 					F17AAA40202657010062A679 = {
@@ -289,6 +295,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -296,6 +303,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -346,6 +354,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -353,6 +362,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
