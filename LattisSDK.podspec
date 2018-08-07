@@ -9,9 +9,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.swift_version = '4.1'
-  s.preserve_paths = '*.framework'
+  # s.preserve_paths = '*.framework'
   s.ios.vendored_frameworks = 'CommonCrypto.framework', 'LattisSDK.framework', 'Oval.framework'
-  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/LattisSDK' }
+  # s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/LattisSDK' }
   s.ios.deployment_target = '10.0'
   s.ios.frameworks = 'CoreBluetooth'
   s.dependency 'KeychainSwift'
