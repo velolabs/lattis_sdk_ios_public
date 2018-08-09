@@ -21,9 +21,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>LattisSDKToken</key>
-	<string>&lt;YOUR TOKEN&gt;</string>
-	<key>LattisSDKUserId</key>
-	<integer>0</integer>
+	<string>ea481fa8f91118bedc914de2e806f0f4b8186ba0177e48fecd7b65f8f31a0059</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
