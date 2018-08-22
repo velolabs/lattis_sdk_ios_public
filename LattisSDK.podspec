@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'LattisSDK'
-  s.version  = '1.1.2'
+  s.version  = '1.1.3'
   s.license  = { :type => 'MIT', :file => 'LICENSE.md' }
   s.summary  = 'Bluetooth connectivity implementation for Ellipse lock (Lattis inc.)'
   s.homepage = 'https://github.com/velolabs/lattis_sdk_ios_public'

@@ -54,6 +54,7 @@
 		F17AAA60202657FE0062A679 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F17AAA61202657FE0062A679 /* PinCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeViewController.swift; sourceTree = "<group>"; };
 		F17AAA65202658080062A679 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F1E807C7212D96AE0031F06A /* LattisSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = LattisSDK.podspec; path = ../LattisSDK.podspec; sourceTree = "<group>"; };
 		F1F3ADA02119EA21005F8A0D /* Oval.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Oval.framework; path = ../../Oval.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +93,7 @@
 		F17AAA38202657010062A679 = {
 			isa = PBXGroup;
 			children = (
+				F1E807C7212D96AE0031F06A /* LattisSDK.podspec */,
 				F17AAA43202657010062A679 /* Lattis Demo */,
 				F17AAA42202657010062A679 /* Products */,
 				B029067A2429CB0B1D52A74C /* Pods */,
