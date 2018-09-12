@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary  = 'Bluetooth connectivity implementation for Ellipse lock (Lattis inc.)'
   s.homepage = 'https://github.com/velolabs/lattis_sdk_ios_public'
   s.authors  = { 'Ravil Khusainov' => 'ravil@lattis.io' }
-  s.source   = { :git => 'https://github.com/velolabs/lattis_sdk_ios_public.git' }
+  s.source   = { :git => 'https://github.com/velolabs/lattis_sdk_ios_public.git', :tag => 'v{s.version}' }
 
   s.swift_version = '4.1'
   s.platform = :ios
