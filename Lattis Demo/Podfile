@@ -6,5 +6,6 @@ target 'Lattis Demo' do
   use_frameworks!
 
   # Pods for Lattis Demo
-  pod 'KeychainSwift'
+  pod 'GradientCircularProgress', :git => 'https://github.com/keygx/GradientCircularProgress'
+  pod 'CryptoSwift'
 end
