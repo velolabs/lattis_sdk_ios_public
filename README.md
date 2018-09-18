@@ -87,7 +87,7 @@ let ellipse: Ellipse = EllipseManager.shared.locks.first
 ellipse?.connect(handler: self)
 ```
 
-or you can unsubscribe to lock updates if it's already connected
+or you can subscribe to lock updates if it's already connected
 ```swift
 ellipse?.subscribe(self)
 ```
