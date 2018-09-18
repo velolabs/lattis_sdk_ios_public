@@ -15,7 +15,7 @@ run
 > If you have any errors with previous step please run
 `pod repo update`
 
-> If you want to use previous version use tag `v1.0.5` or
+> If you want to use previous version use tag `v1.1.5` or
 `pod 'LattisSDK', '1.0.5'`
 
 ## Usage
