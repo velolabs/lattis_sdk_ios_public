@@ -8,14 +8,20 @@
 ## Installation
 
 Add this line to your **Podfile**
-`pod 'LattisSDK'`
+```PodFile
+pod 'LattisSDK'
+```
 run
-`pod install`
+```
+pod install
+```
 
 > If you have any errors with previous step please run
+
 `pod repo update`
 
 > If you want to use previous version use tag `v1.1.5` or
+
 `pod 'LattisSDK', '1.1.5'`
 
 ## Usage
