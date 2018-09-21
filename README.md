@@ -10,7 +10,7 @@
 
 Add this line to your **Podfile**
 
-`pod 'LattisSDK', '1.1.3'`
+`pod 'LattisSDK', '1.1.6'`
 
 run
 
