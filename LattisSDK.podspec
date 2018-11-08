@@ -9,8 +9,9 @@ Pod::Spec.new do |s|
 
   s.swift_version = '4.1'
   s.platform = :ios
-  s.ios.vendored_frameworks = 'CommonCrypto.framework', 'LattisSDK.framework', 'Oval.framework'
+  s.ios.vendored_frameworks = 'LattisSDK.framework', 'Oval.framework'
   s.ios.deployment_target = '10.0'
   s.ios.frameworks = 'CoreBluetooth'
   s.dependency 'KeychainSwift'
+  s.dependency 'CryptoSwift'
 end

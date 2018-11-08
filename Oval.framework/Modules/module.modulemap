@@ -1,5 +1,5 @@
 framework module Oval {
-  umbrella header "Oval.h"
+  umbrella header "Oval-iOS-umbrella.h"
 
   export *
   module * { export * }

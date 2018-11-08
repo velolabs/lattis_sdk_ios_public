@@ -13,8 +13,6 @@
 		F17AAA4F202657010062A679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17AAA4D202657010062A679 /* LaunchScreen.storyboard */; };
 		F17AAA5A202657380062A679 /* LattisSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17AAA562026571A0062A679 /* LattisSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F17AAA5B202657380062A679 /* LattisSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F17AAA562026571A0062A679 /* LattisSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F17AAA5D2026573C0062A679 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17AAA58202657200062A679 /* CommonCrypto.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F17AAA5E2026573C0062A679 /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F17AAA58202657200062A679 /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F17AAA62202657FE0062A679 /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17AAA5F202657FE0062A679 /* LockViewController.swift */; };
 		F17AAA63202657FE0062A679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17AAA60202657FE0062A679 /* ViewController.swift */; };
 		F17AAA64202657FE0062A679 /* PinCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17AAA61202657FE0062A679 /* PinCodeViewController.swift */; };
@@ -30,7 +28,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F17AAA5E2026573C0062A679 /* CommonCrypto.framework in Embed Frameworks */,
 				F17AAA5B202657380062A679 /* LattisSDK.framework in Embed Frameworks */,
 				F1F3ADA32119EA2F005F8A0D /* Oval.framework in Embed Frameworks */,
 			);
@@ -49,7 +46,6 @@
 		F17AAA4E202657010062A679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F17AAA50202657010062A679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F17AAA562026571A0062A679 /* LattisSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LattisSDK.framework; path = ../../LattisSDK.framework; sourceTree = "<group>"; };
-		F17AAA58202657200062A679 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = ../../CommonCrypto.framework; sourceTree = "<group>"; };
 		F17AAA5F202657FE0062A679 /* LockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
 		F17AAA60202657FE0062A679 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F17AAA61202657FE0062A679 /* PinCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +60,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1F3ADA12119EA21005F8A0D /* Oval.framework in Frameworks */,
-				F17AAA5D2026573C0062A679 /* CommonCrypto.framework in Frameworks */,
 				F17AAA5A202657380062A679 /* LattisSDK.framework in Frameworks */,
 				57C9BAF2D725E8EB18BCB723 /* Pods_Lattis_Demo.framework in Frameworks */,
 			);
@@ -113,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				F1F3ADA02119EA21005F8A0D /* Oval.framework */,
-				F17AAA58202657200062A679 /* CommonCrypto.framework */,
 				F17AAA562026571A0062A679 /* LattisSDK.framework */,
 				F17AAA44202657010062A679 /* AppDelegate.swift */,
 				F17AAA5F202657FE0062A679 /* LockViewController.swift */,
@@ -140,7 +134,6 @@
 				F17AAA3F202657010062A679 /* Resources */,
 				F17AAA5C202657390062A679 /* Embed Frameworks */,
 				C4C31583966F110A7F1020DE /* [CP] Embed Pods Frameworks */,
-				098D9927670309B0B032EDE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,21 +197,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		098D9927670309B0B032EDE4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lattis Demo/Pods-Lattis Demo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C4C31583966F110A7F1020DE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,10 +204,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lattis Demo/Pods-Lattis Demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
