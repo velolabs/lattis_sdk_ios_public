@@ -1,14 +1,17 @@
 PODS:
-  - CryptoSwift (0.11.0)
-  - GradientCircularProgress (3.9.2)
+  - CryptoSwift (0.13.1)
+  - GradientCircularProgress (3.11.0)
+  - KeychainSwift (13.0.0)
 
 DEPENDENCIES:
   - CryptoSwift
   - GradientCircularProgress (from `https://github.com/keygx/GradientCircularProgress`)
+  - KeychainSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CryptoSwift
+    - KeychainSwift
 
 EXTERNAL SOURCES:
   GradientCircularProgress:
@@ -16,13 +19,14 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GradientCircularProgress:
-    :commit: c6d9733c343fdb858fa83ca59a2fa86a4a381fa2
+    :commit: 72696e97effb5c6850e6bfd850e2833ce3ea9286
     :git: https://github.com/keygx/GradientCircularProgress
 
 SPEC CHECKSUMS:
-  CryptoSwift: ad5208dd2aae0a764ea4ce2c2d34bd067cae67f0
-  GradientCircularProgress: 1a3ddccd88785d3d2f0782bb6f9012f018d2a308
+  CryptoSwift: ff68c35a53e03177d31aaa2c1e8b3e010aeed6cb
+  GradientCircularProgress: d517ad2863a62bbe77b0a7c94328b95be0a0ace7
+  KeychainSwift: 23d6c16cbc33f20fafa30c3d783241b4b87d998c
 
-PODFILE CHECKSUM: a282399423894c54e96f1a2a5b14328b57d6398a
+PODFILE CHECKSUM: 6172abab1066c5925fe1bf946475d6424b024a3b
 
 COCOAPODS: 1.5.3
