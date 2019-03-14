@@ -100,6 +100,17 @@ ellipse?.disconnect()
 ```
 if you want to disconnect the lock.
 
+### Other features
+
+#### Manage captive touch panel
+
+You can disable or enable captive touch panel
+```swift
+ellipse?.isCapTouchEnabled = false // true by default
+```
+* isCapTouchEnabled == nil means you don't have it's state yet. You can receive updates for that value in `didUpdate value` delegate method
+
+
 ## Example
 You can find `Lattis Demo` directory in the root of this repository. It contains live demo project, demonstrating SDK API's usage.
 
