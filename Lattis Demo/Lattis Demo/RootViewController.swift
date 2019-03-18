@@ -54,7 +54,9 @@ class RootViewController: UITableViewController {
             }))
             dialog.addAction(.init(title: "Flash LED", style: .default, handler: { _ in
                 self.progress(text: "Flashing LED")
-                ellipse.flashLED(completion: self.hideProgress)
+                ellipse.flashLED { error in
+                    self.hideProgress()
+                }
             }))
         }
         dialog.addAction(.init(title: "Cancel", style: .cancel, handler: nil))

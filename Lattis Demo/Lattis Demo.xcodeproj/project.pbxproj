@@ -18,6 +18,7 @@
 		F17AAA4F202657010062A679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17AAA4D202657010062A679 /* LaunchScreen.storyboard */; };
 		F17AAA5A202657380062A679 /* LattisSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17AAA562026571A0062A679 /* LattisSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F17AAA5B202657380062A679 /* LattisSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F17AAA562026571A0062A679 /* LattisSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F191FB67223A9050002A8AB7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F191FB66223A9050002A8AB7 /* README.md */; };
 		F1F3ADA12119EA21005F8A0D /* Oval.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F3ADA02119EA21005F8A0D /* Oval.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F1F3ADA32119EA2F005F8A0D /* Oval.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1F3ADA02119EA21005F8A0D /* Oval.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		F17AAA4E202657010062A679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F17AAA50202657010062A679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F17AAA562026571A0062A679 /* LattisSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LattisSDK.framework; path = ../../LattisSDK.framework; sourceTree = "<group>"; };
+		F191FB66223A9050002A8AB7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F1E807C7212D96AE0031F06A /* LattisSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = LattisSDK.podspec; path = ../LattisSDK.podspec; sourceTree = "<group>"; };
 		F1F3ADA02119EA21005F8A0D /* Oval.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Oval.framework; path = ../../Oval.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 		F17AAA38202657010062A679 = {
 			isa = PBXGroup;
 			children = (
+				F191FB66223A9050002A8AB7 /* README.md */,
 				F1E807C7212D96AE0031F06A /* LattisSDK.podspec */,
 				F17AAA43202657010062A679 /* Lattis Demo */,
 				F17AAA42202657010062A679 /* Products */,
@@ -193,6 +196,7 @@
 			files = (
 				F141D8A721493A60001B6126 /* Main.storyboard in Resources */,
 				F17AAA4F202657010062A679 /* LaunchScreen.storyboard in Resources */,
+				F191FB67223A9050002A8AB7 /* README.md in Resources */,
 				F17AAA4C202657010062A679 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
