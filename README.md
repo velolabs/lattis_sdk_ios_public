@@ -102,13 +102,13 @@ if you want to disconnect the lock.
 
 ### Other features
 
-#### Manage captive touch panel
+#### Manage captive touch panel (FW => 2.75)
 
 You can disable or enable captive touch panel
 ```swift
 ellipse?.isCapTouchEnabled = false // true by default
 ```
-* isCapTouchEnabled == nil means you don't have it's state yet. You can receive updates for that value in `didUpdate value` delegate method
+* `isCapTouchEnabled == nil` means you don't have it's state yet. You can receive updates for that value in `didUpdate value` delegate method
 
 
 ## Example
