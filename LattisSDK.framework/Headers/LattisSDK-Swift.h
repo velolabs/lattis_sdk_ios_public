@@ -164,6 +164,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if __has_feature(modules)
 @import CoreBluetooth;
+@import Foundation;
 @import ObjectiveC;
 #endif
 
@@ -187,6 +188,24 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC9LattisSDK7Ellipse")
 @interface Ellipse : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull macId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+@property (nonatomic, readonly) BOOL isPaired;
+@property (nonatomic, readonly) BOOL isUpdated;
+@property (nonatomic, readonly, copy) NSString * _Nullable firmwareVersion;
+@property (nonatomic, readonly, copy) NSString * _Nullable bootloaderVersion;
+@property (nonatomic, readonly, copy) NSString * _Nullable serialNumber;
+@property (nonatomic, readonly) BOOL isFactoryMode;
+- (void)disconnect;
+@property (nonatomic) BOOL isLocked;
+- (void)enableAutoLock;
+- (void)checkSecurityStatus;
+- (BOOL)updateWithContentsOf:(NSURL * _Nonnull)url error:(NSError * _Nullable * _Nullable)error;
+- (void)updateWithFirmware:(NSArray<NSNumber *> * _Nonnull)firmware;
+- (void)factoryResetWithDisconnect:(BOOL)disconnect;
+- (void)bootReset;
+- (void)readCapTouchState;
+- (void)flashLEDWithCompletion:(void (^ _Nullable)(NSError * _Nullable))completion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -208,11 +227,24 @@ SWIFT_CLASS("_TtC9LattisSDK7Ellipse")
 
 
 
+@protocol EllipseManagerDelegate;
 
 SWIFT_CLASS("_TtC9LattisSDK14EllipseManager")
 @interface EllipseManager : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EllipseManager * _Nonnull shared;)
++ (EllipseManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic, readonly, copy) NSArray<Ellipse *> * _Nonnull locks;
+@property (nonatomic, readonly) BOOL isOn;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable secret;)
++ (NSString * _Nullable)secret SWIFT_WARN_UNUSED_RESULT;
++ (void)setSecret:(NSString * _Nullable)newValue;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (void)scanWith:(id <EllipseManagerDelegate> _Nullable)handler;
+- (void)subscribeWithHandler:(id <EllipseManagerDelegate> _Nonnull)handler;
+- (void)stopScan;
+- (void)disconnectWithEllipse:(Ellipse * _Nonnull)ellipse;
+- (void)clean;
 @end
 
 @class CBCentralManager;
@@ -225,6 +257,14 @@ SWIFT_CLASS("_TtC9LattisSDK14EllipseManager")
 - (void)centralManager:(CBCentralManager * _Nonnull)central didFailToConnectPeripheral:(CBPeripheral * _Nonnull)peripheral error:(NSError * _Nullable)error;
 - (void)centralManager:(CBCentralManager * _Nonnull)central didDisconnectPeripheral:(CBPeripheral * _Nonnull)peripheral error:(NSError * _Nullable)error;
 - (void)centralManager:(CBCentralManager * _Nonnull)central willRestoreState:(NSDictionary<NSString *, id> * _Nonnull)dict;
+@end
+
+
+SWIFT_PROTOCOL("_TtP9LattisSDK22EllipseManagerDelegate_")
+@protocol EllipseManagerDelegate
+- (void)manager:(EllipseManager * _Nonnull)lockManager didRestoreConnected:(NSArray<Ellipse *> * _Nonnull)locks;
+- (void)manager:(EllipseManager * _Nonnull)lockManager didUpdateLocks:(NSArray<Ellipse *> * _Nonnull)insert delete:(NSArray<Ellipse *> * _Nonnull)delete_;
+- (void)manager:(EllipseManager * _Nonnull)lockManager didUpdateConnectionState:(BOOL)connected;
 @end
 
 #if __has_attribute(external_source_symbol)
