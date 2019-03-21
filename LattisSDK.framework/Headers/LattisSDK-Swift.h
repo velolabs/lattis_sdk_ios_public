@@ -227,7 +227,21 @@ SWIFT_CLASS("_TtC9LattisSDK7Ellipse")
 
 
 
-@protocol EllipseManagerDelegate;
+@protocol LSEllipseDelegate;
+enum LSEllipseConnection : NSInteger;
+enum LSEllipseSecurity : NSInteger;
+
+@interface Ellipse (SWIFT_EXTENSION(LattisSDK))
+- (void)connectWithHandler:(id <LSEllipseDelegate> _Nonnull)handler;
+- (void)subscribe:(id <LSEllipseDelegate> _Nonnull)handler;
+- (void)unsubscribe:(id <LSEllipseDelegate> _Nonnull)handler;
+@property (nonatomic, readonly) enum LSEllipseConnection connectionState;
+@property (nonatomic, readonly) enum LSEllipseSecurity securityState;
+@property (nonatomic) BOOL objcIsCapTouchEnabled;
+@property (nonatomic) BOOL objcIsMagnetAutoLockEnabled;
+@end
+
+@protocol LSEllipseManagerDelegate;
 
 SWIFT_CLASS("_TtC9LattisSDK14EllipseManager")
 @interface EllipseManager : NSObject
@@ -240,8 +254,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable sec
 + (void)setSecret:(NSString * _Nullable)newValue;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-- (void)scanWith:(id <EllipseManagerDelegate> _Nullable)handler;
-- (void)subscribeWithHandler:(id <EllipseManagerDelegate> _Nonnull)handler;
+- (void)scanWith:(id <LSEllipseManagerDelegate> _Nullable)handler;
+- (void)subscribeWithHandler:(id <LSEllipseManagerDelegate> _Nonnull)handler;
 - (void)stopScan;
 - (void)disconnectWithEllipse:(Ellipse * _Nonnull)ellipse;
 - (void)clean;
@@ -260,12 +274,47 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable sec
 @end
 
 
-SWIFT_PROTOCOL("_TtP9LattisSDK22EllipseManagerDelegate_")
-@protocol EllipseManagerDelegate
+SWIFT_PROTOCOL_NAMED("EllipseManagerDelegate")
+@protocol LSEllipseManagerDelegate
 - (void)manager:(EllipseManager * _Nonnull)lockManager didRestoreConnected:(NSArray<Ellipse *> * _Nonnull)locks;
 - (void)manager:(EllipseManager * _Nonnull)lockManager didUpdateLocks:(NSArray<Ellipse *> * _Nonnull)insert delete:(NSArray<Ellipse *> * _Nonnull)delete_;
 - (void)manager:(EllipseManager * _Nonnull)lockManager didUpdateConnectionState:(BOOL)connected;
 @end
+
+typedef SWIFT_ENUM(NSInteger, LSEllipseConnection, closed) {
+  LSEllipseConnectionPaired = 0,
+  LSEllipseConnectionUnpaired = 1,
+  LSEllipseConnectionConnecting = 2,
+  LSEllipseConnectionReconnecting = 3,
+  LSEllipseConnectionFlashingLED = 4,
+  LSEllipseConnectionManageCapTouch = 5,
+  LSEllipseConnectionFailed = 6,
+  LSEllipseConnectionUpdating = 7,
+  LSEllipseConnectionRestored = 8,
+};
+
+enum LSEllipseValue : NSInteger;
+
+SWIFT_PROTOCOL("_TtP9LattisSDK17LSEllipseDelegate_")
+@protocol LSEllipseDelegate
+- (void)ellipse:(Ellipse * _Nonnull)ellipse didUpdate:(enum LSEllipseConnection)connection error:(NSError * _Nullable)error;
+- (void)ellipse:(Ellipse * _Nonnull)ellipse didUpdate:(enum LSEllipseSecurity)security;
+- (void)ellipse:(Ellipse * _Nonnull)ellipse didUpdate:(id _Nonnull)value with:(enum LSEllipseValue)valueType;
+@end
+
+typedef SWIFT_ENUM(NSInteger, LSEllipseSecurity, closed) {
+  LSEllipseSecurityUnlocked = 0,
+  LSEllipseSecurityLocked = 1,
+  LSEllipseSecurityMiddle = 2,
+  LSEllipseSecurityInvalid = 3,
+  LSEllipseSecurityAuto = 4,
+};
+
+typedef SWIFT_ENUM(NSInteger, LSEllipseValue, closed) {
+  LSEllipseValueFirmwareVersion = 0,
+  LSEllipseValueSerialNumber = 1,
+  LSEllipseValueCapTouchEnabled = 2,
+};
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
