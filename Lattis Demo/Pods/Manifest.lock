@@ -1,5 +1,5 @@
 PODS:
-  - CryptoSwift (0.13.1)
+  - CryptoSwift (0.15.0)
   - GradientCircularProgress (3.11.0)
   - KeychainSwift (13.0.0)
 
@@ -23,10 +23,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/keygx/GradientCircularProgress
 
 SPEC CHECKSUMS:
-  CryptoSwift: ff68c35a53e03177d31aaa2c1e8b3e010aeed6cb
+  CryptoSwift: 769f58a9e89f64e8796c2e59ce5f002dc81a2438
   GradientCircularProgress: d517ad2863a62bbe77b0a7c94328b95be0a0ace7
   KeychainSwift: 23d6c16cbc33f20fafa30c3d783241b4b87d998c
 
 PODFILE CHECKSUM: 6172abab1066c5925fe1bf946475d6424b024a3b
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
