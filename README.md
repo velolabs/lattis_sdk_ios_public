@@ -122,7 +122,7 @@ You can find `Lattis Demo` directory in the root of this repository. It contains
 
 ## Restrictions
 
-Frameworks are build for iOS devices only. This dependency can't be used on iOS Simulator
+Frameworks is Universal (iOS Simulator support). You won't be able to upload your app with this framework to the AppStore. You can find a solution [here]( https://stackoverflow.com/questions/49927498/ios-carthage-submit-to-app-store-issues-unsupported-architecture-invalid-segme).
 Framework now have partial support for Objective-C.
 Objective-C support restrictions related to using nested types and enum associated values.
 To use this all the features with Objective-C code you should write a Swift wrapper.
