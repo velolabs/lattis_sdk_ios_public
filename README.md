@@ -117,6 +117,13 @@ ellipse?.isMagnetAutoLockEnabled = true // false by default
 ```
 * `isMagnetAutoLockEnabled == nil` means you don't have it's state yet. You can receive updates for that value in `didUpdate value` delegate method. No specific case for the value, just catch case for the Captive Touch value and check `ellipse?.isMagnetAutoLockEnabled`
 
+#### Shackle position check (FW => 2.75)
+You can check if shackle is inserted or not.
+```swift
+ellipse?.isShackleInserted
+```
+You can receive updates for that value in `didUpdate value` delegate method.
+
 ## Example
 You can find `Lattis Demo` directory in the root of this repository. It contains live demo project, demonstrating SDK API's usage.
 
