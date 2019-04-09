@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.authors  = { 'Ravil Khusainov' => 'ravil@lattis.io' }
   s.source   = { :git => 'https://github.com/velolabs/lattis_sdk_ios_public.git', :tag => "v#{s.version}" }
 
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
   s.platform = :ios
   s.ios.vendored_frameworks = 'LattisSDK.framework', 'Oval.framework'
   s.ios.deployment_target = '10.0'

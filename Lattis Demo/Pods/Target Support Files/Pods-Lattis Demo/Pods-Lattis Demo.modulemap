@@ -1,6 +1,0 @@
-framework module Pods_Lattis_Demo {
-  umbrella header "Pods-Lattis Demo-umbrella.h"
-
-  export *
-  module * { export * }
-}

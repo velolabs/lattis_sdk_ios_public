@@ -1,5 +1,5 @@
 # Lattis SDK for iOS
-![Xcode](https://img.shields.io/badge/Xcode-10-blue.svg) ![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg) ![platform](https://img.shields.io/badge/platform-iOS%2010.0%2B-lightgrey.svg)
+![Xcode](https://img.shields.io/badge/Xcode-10-blue.svg) ![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg) ![platform](https://img.shields.io/badge/platform-iOS%2010.0%2B-lightgrey.svg)
 ## Dependencies
 
 * Oval.framework (Lattis networking API)
