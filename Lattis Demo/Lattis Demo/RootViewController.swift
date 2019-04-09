@@ -102,7 +102,7 @@ extension RootViewController: EllipseManagerDelegate {
 
 extension RootViewController: EllipseDelegate {    
     func ellipse(_ ellipse: Ellipse, didUpdate connection: Ellipse.Connection) {
-        guard let idx = locks.index(of: ellipse) else { return }
+        guard let idx = locks.firstIndex(of: ellipse) else { return }
         let indexPath = IndexPath(row: idx, section: 0)
         switch connection {
         case .paired:
