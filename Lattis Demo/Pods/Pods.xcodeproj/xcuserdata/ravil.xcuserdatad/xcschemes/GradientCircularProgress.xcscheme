@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8340D0A581B8909BF5F7C87614BABC33"
+               BlueprintIdentifier = "204D2F283A038CD896941CEBE06FD327"
+               BuildableName = "GradientCircularProgress.framework"
                BlueprintName = "GradientCircularProgress"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "GradientCircularProgress.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

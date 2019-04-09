@@ -110,10 +110,26 @@ ellipse?.isCapTouchEnabled = false // true by default
 ```
 * `isCapTouchEnabled == nil` means you don't have it's state yet. You can receive updates for that value in `didUpdate value` delegate method
 
+#### Manage magnet auto lock (FW => 2.75)
+You can  manage magnetometer based auto lock feature
+```swift
+ellipse?.isMagnetAutoLockEnabled = true // false by default
+```
+* `isMagnetAutoLockEnabled == nil` means you don't have it's state yet. You can receive updates for that value in `didUpdate value` delegate method. No specific case for the value, just catch case for the Captive Touch value and check `ellipse?.isMagnetAutoLockEnabled`
+
+#### Shackle position check (FW => 2.75)
+You can check if shackle is inserted or not.
+```swift
+ellipse?.isShackleInserted
+```
+You can receive updates for that value in `didUpdate value` delegate method.
 
 ## Example
 You can find `Lattis Demo` directory in the root of this repository. It contains live demo project, demonstrating SDK API's usage.
 
 ## Restrictions
 
-Frameworks are build for iOS devices only. This dependency can't be used on iOS Simulator
+Frameworks is Universal (iOS Simulator support). You won't be able to upload your app with this framework to the AppStore. You can find a solution [here]( https://stackoverflow.com/questions/49927498/ios-carthage-submit-to-app-store-issues-unsupported-architecture-invalid-segme).
+Framework now have partial support for Objective-C.
+Objective-C support restrictions related to using nested types and enum associated values.
+To use this all the features with Objective-C code you should write a Swift wrapper.
