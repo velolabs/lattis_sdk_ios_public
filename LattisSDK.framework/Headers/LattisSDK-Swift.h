@@ -205,6 +205,7 @@ SWIFT_CLASS("_TtC9LattisSDK7Ellipse")
 - (void)checkSecurityStatus;
 - (BOOL)updateWithContentsOf:(NSURL * _Nonnull)url error:(NSError * _Nullable * _Nullable)error;
 - (void)updateWithFirmware:(NSArray<NSNumber *> * _Nonnull)firmware;
+- (void)cleanCache;
 - (void)factoryResetWithDisconnect:(BOOL)disconnect;
 - (void)bootReset;
 @property (nonatomic) BOOL isShackleInserted;
@@ -324,6 +325,7 @@ typedef SWIFT_ENUM(NSInteger, LSEllipseValue, closed) {
   LSEllipseValueSerialNumber = 1,
   LSEllipseValueCapTouchEnabled = 2,
   LSEllipseValueShackleInserted = 3,
+  LSEllipseValueMagnetAutoLockEnabled = 4,
 };
 
 #if __has_attribute(external_source_symbol)

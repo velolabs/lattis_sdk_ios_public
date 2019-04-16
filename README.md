@@ -115,7 +115,7 @@ You can  manage magnetometer based auto lock feature
 ```swift
 ellipse?.isMagnetAutoLockEnabled = true // false by default
 ```
-* `isMagnetAutoLockEnabled == nil` means you don't have it's state yet. You can receive updates for that value in `didUpdate value` delegate method. No specific case for the value, just catch case for the Captive Touch value and check `ellipse?.isMagnetAutoLockEnabled`
+* `isMagnetAutoLockEnabled == nil` means you don't have it's state yet. You can receive updates for that value in `didUpdate value` delegate method.
 
 #### Shackle position check (FW => 2.75)
 You can check if shackle is inserted or not.
