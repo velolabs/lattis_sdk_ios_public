@@ -209,6 +209,7 @@ SWIFT_CLASS("_TtC9LattisSDK7Ellipse")
 - (void)factoryResetWithDisconnect:(BOOL)disconnect;
 - (void)bootReset;
 @property (nonatomic) BOOL isShackleInserted;
+@property (nonatomic) BOOL isLEDBlinking;
 - (void)readCapTouchState;
 - (void)flashLEDWithCompletion:(void (^ _Nullable)(NSError * _Nullable))completion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
