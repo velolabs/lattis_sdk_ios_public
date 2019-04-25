@@ -200,7 +200,8 @@ SWIFT_CLASS("_TtC9LattisSDK7Ellipse")
 @property (nonatomic, readonly, copy) NSString * _Nullable serialNumber;
 @property (nonatomic, readonly) BOOL isFactoryMode;
 - (void)disconnect;
-@property (nonatomic) BOOL isLocked;
+- (void)lock;
+- (void)unlock;
 - (void)enableAutoLock;
 - (void)checkSecurityStatus;
 - (BOOL)updateWithContentsOf:(NSURL * _Nonnull)url error:(NSError * _Nullable * _Nullable)error;
@@ -245,6 +246,7 @@ enum LSEllipseSecurity : NSInteger;
 @property (nonatomic, readonly) enum LSEllipseSecurity securityState;
 @property (nonatomic) BOOL objcIsCapTouchEnabled;
 @property (nonatomic) BOOL objcIsMagnetAutoLockEnabled;
+@property (nonatomic, readonly) enum LSEllipseSecurity objcSecurity;
 @end
 
 
