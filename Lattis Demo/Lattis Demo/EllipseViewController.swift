@@ -50,13 +50,17 @@ class EllipseViewController: UIViewController {
         super.viewDidLoad()
         
         macLabel.text = ellipse.macId
-        securitySwitch.isOn = !ellipse.isLocked
+        securitySwitch.isOn = ellipse.security == .unlocked
         ellipse.subscribe(self, theft: self, crash: self)
         getPin()
     }
     
     @IBAction func changeSecurityState(_ sender: UISwitch) {
-        ellipse.isLocked = !sender.isOn
+        if sender.isOn {
+            ellipse.unlock()
+        } else {
+            ellipse.lock()
+        }
     }
     
     @IBAction func changeAutoLockState(_ sender: UISwitch) {
@@ -64,7 +68,7 @@ class EllipseViewController: UIViewController {
             ellipse.enableAutoLock()
             isAutoLockEnabled = true
         } else {
-            ellipse.isLocked = false
+            ellipse.unlock()
         }
     }
     
@@ -214,7 +218,7 @@ extension EllipseViewController: EllipseDelegate {
     }
     
     func ellipse(_ ellipse: Ellipse, didUpdate security: Ellipse.Security) {
-        securitySwitch.isOn = ellipse.isLocked == false
+        securitySwitch.isOn = security == .unlocked
         isAutoLockEnabled = security == .auto
         autoLockSwitch.isOn = security == .auto
     }

@@ -127,9 +127,5 @@ You can receive updates for that value in `didUpdate value` delegate method.
 ## Example
 You can find `Lattis Demo` directory in the root of this repository. It contains live demo project, demonstrating SDK API's usage.
 
-## Restrictions
-
-Frameworks is Universal (iOS Simulator support). You won't be able to upload your app with this framework to the AppStore. You can find a solution [here]( https://stackoverflow.com/questions/49927498/ios-carthage-submit-to-app-store-issues-unsupported-architecture-invalid-segme).
-Framework now have partial support for Objective-C.
-Objective-C support restrictions related to using nested types and enum associated values.
-To use this all the features with Objective-C code you should write a Swift wrapper.
+## Background mode
+This SDK will work in background automatically if you switch on `Uses Bluetooth LE accessories` in the app Capabilities settings
