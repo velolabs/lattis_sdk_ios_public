@@ -106,24 +106,28 @@ class EllipseViewController: UIViewController {
             present(picker, animated: true, completion: nil)
         }
         self.progress(text: "Checking")
-        network.firmvareVersions(success: { (versions) in
+        network.firmvareVersions { (result) in
             self.hideProgress()
-            show(versions: versions)
-        }, fail: { error in
-            self.hideProgress()
-            self.warn(error: error)
-        })
+            switch result {
+            case .success(let versions):
+                show(versions: versions)
+            case .failure(let error):
+                self.warn(error: error)
+            }
+        }
     }
     
     fileprivate func getLog(version: String) {
         progress(text: version)
-        network.firmvareChangeLog(for: version, success: { (log) in
+        network.firmvareChangeLog(for: version) { (result) in
             self.hideProgress()
-            self.show(log: log, version: version)
-        }, fail: { error in
-            self.hideProgress()
-            self.warn(error: error)
-        })
+            switch result {
+            case .success(let log):
+                self.show(log: log, version: version)
+            case .failure(let error):
+                self.warn(error: error)
+            }
+        }
     }
     
     fileprivate func show(log: [String], version: String) {
@@ -131,12 +135,15 @@ class EllipseViewController: UIViewController {
         let alert = UIAlertController(title: version, message: str, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { (_) in
             self.progessRatio()
-            self.network.firmvare(version: version, success: { [weak self] (fw) in
-                self?.ellipse.update(firmware: fw)
-                }, fail: { error in
-                    self.hideProgress()
-                    self.warn(error: error)
-            })
+            self.network.firmvare(version: version) { [weak self] (result) in
+                switch result {
+                case .success(let fw):
+                    self?.ellipse.update(firmware: fw)
+                case .failure(let error):
+                    self?.hideProgress()
+                    self?.warn(error: error)
+                }
+            }
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
         present(alert, animated: true, completion: nil)
@@ -169,10 +176,15 @@ class EllipseViewController: UIViewController {
     }
     
     fileprivate func getPin() {
-        network.getPinCode(forLockWith: ellipse.macId, success: { (pin) in
-            let chars = pin.compactMap(Pin.init).map({$0.char})
-            self.pinCodeLabel.text = String(chars)
-        }, fail: {print($0)})
+        network.getPinCode(forLockWith: ellipse.macId) { (result) in
+            switch result {
+            case .success(let pin):
+                let chars = pin.compactMap(Pin.init).map({$0.char})
+                self.pinCodeLabel.text = String(chars)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
@@ -237,19 +249,20 @@ extension EllipseViewController: TheftPresentable, CrashPresentable {
 extension EllipseViewController: PinViewControllerDelegate {
     func save(pin: [Pin], completion: @escaping (Error?) -> ()) {
         progress(text: "Saving Pin code")
-        network.save(pinCode: pin.map({$0.rawValue}), forLock: ellipse.macId, success: {
+        network.save(pinCode: pin.map({$0.rawValue}), forLock: ellipse.macId) { result in
             self.hideProgress()
-            do {
-                try self.ellipse.set(pinCode: pin.compactMap(Ellipse.Pin.init))
-                self.pinCodeLabel.text = String(pin.map({$0.char}))
-                completion(nil)
-            } catch {
+            switch result {
+            case .success:
+                do {
+                    try self.ellipse.set(pinCode: pin.compactMap(Ellipse.Pin.init))
+                    self.pinCodeLabel.text = String(pin.map({$0.char}))
+                    completion(nil)
+                } catch {
+                    completion(error)
+                }
+            case .failure(let error):
                 completion(error)
             }
-            
-        }) { (error) in
-            self.hideProgress()
-            completion(error)
         }
     }
 }
