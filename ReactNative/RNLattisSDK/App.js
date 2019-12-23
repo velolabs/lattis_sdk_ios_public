@@ -21,6 +21,7 @@ import {
 } from 'react-native';
 
 const Lattis = NativeModules.RNEllipseManager;
+var dismiss;
 
 export default class App extends Component {
   
@@ -28,9 +29,12 @@ export default class App extends Component {
 
   constructor(props) {
     super(props);
+    dismiss = this.hideDetails;
   }
 
   array = [];
+  locksListener;
+  connectionStateListener;
 
   state = {
     arrayHolder: [],
@@ -53,13 +57,14 @@ export default class App extends Component {
   componentDidMount() {
     this.setState({ arrayHolder: [...this.array] })
 
-    this.lattisEmitter.addListener(Lattis.locksUpdated, (locks) => this.add(locks));
-    this.lattisEmitter.addListener(Lattis.lockConnectionStateChanged, (lock) => this.handle(lock));
+    this.locksListener = this.lattisEmitter.addListener(Lattis.locksUpdated, (locks) => this.add(locks));
+    this.connectionStateListener = this.lattisEmitter.addListener(Lattis.lockConnectionStateChanged, (lock) => this.handle(lock));
     Lattis.startScan()
   }
 
   componentWillUnmount() {
-    this.lattisEmitter.removeSubscription()
+    this.locksListener.remove();
+    this.connectionStateListener.remove();
   }
 
   hideDetails = () => {
@@ -74,7 +79,7 @@ export default class App extends Component {
           transparent={false}
           visible={this.state.detailsMacId != null}
         >
-          <Details macId={this.state.detailsMacId}/>
+          <Details macId={this.state.detailsMacId} />
         </Modal>
 
         <FlatList
@@ -98,10 +103,13 @@ class Details extends Component {
 
   constructor(props) {
     super(props);
-    this.macId = props.macId
+    this.macId = props.macId;
   }
 
-  macId
+  lockStateListener;
+  connectionStateListener;
+  valuesListener;
+  macId;
   state = {
     title: 'Connecting...',
     isLocked: true,
@@ -178,15 +186,17 @@ class Details extends Component {
   }
 
   componentDidMount() {
-    this.lattisEmitter.addListener(Lattis.lockConnectionStateChanged, (lock) => this.handleConnection(lock))
-    this.lattisEmitter.addListener(Lattis.lockSecurityStateChanged, (lock) => this.handleSecurity(lock))
-    this.lattisEmitter.addListener(Lattis.lockValuesUpdated, (lock) => this.handleValues(lock))
+    this.connectionStateListener = this.lattisEmitter.addListener(Lattis.lockConnectionStateChanged, (lock) => this.handleConnection(lock))
+    this.lockStateListener = this.lattisEmitter.addListener(Lattis.lockSecurityStateChanged, (lock) => this.handleSecurity(lock))
+    this.valuesListener = this.lattisEmitter.addListener(Lattis.lockValuesUpdated, (lock) => this.handleValues(lock))
     Lattis.connect(this.macId)
   }
 
   componentWillUnmount() {
-    this.lattisEmitter.removeSubscription()
-    Lattis.disconnect(this.macId)
+    this.connectionStateListener.remove();
+    this.lockStateListener.remove();
+    this.valuesListener.remove();
+    Lattis.disconnect(this.macId);
   }
 
   render() {
@@ -232,7 +242,7 @@ class Details extends Component {
           <Text style={styles.toggle}>FW Version:</Text>
           <Text style={styles.toggle}>{this.state.fwVersion}</Text>
         </View>
-        <Button title="Disconnect" onPress={() => console.log('not')}/>
+        <Button title="Disconnect" onPress={dismiss}/>
       </View>
     );
   }
