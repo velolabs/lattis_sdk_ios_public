@@ -1,9 +1,10 @@
 # Lattis SDK for iOS
-![Xcode](https://img.shields.io/badge/Xcode-10-blue.svg) ![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg) ![platform](https://img.shields.io/badge/platform-iOS%2010.0%2B-lightgrey.svg)
+![Xcode](https://img.shields.io/badge/Xcode-11-blue.svg) ![Swift](https://img.shields.io/badge/Swift-5.1-orange.svg) ![platform](https://img.shields.io/badge/platform-iOS%2010.0%2B-lightgrey.svg)
 ## Dependencies
 
 * Oval.framework (Lattis networking API)
 * [KeychainSwift](https://github.com/evgenyneu/keychain-swift.git)
+* [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift.git)
 
 ## Installation
 
@@ -126,6 +127,9 @@ You can receive updates for that value in `didUpdate value` delegate method.
 
 ## Example
 You can find `Lattis Demo` directory in the root of this repository. It contains live demo project, demonstrating SDK API's usage.
+
+## React Native support
+This library has Rect Native support. You can find example project in following directory `ReactNative/RNLattisSDK`. Visit [wiki](https://github.com/velolabs/lattis_sdk_ios_public/wiki/React-Native) page for more information on adding `LattisSDK` manually (without Cocoapods) to your React Native project.
 
 ## Background mode
 This SDK will work in background automatically if you switch on `Uses Bluetooth LE accessories` in the app Capabilities settings
