@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
-// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name LattisSDK
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name LattisSDK
 import CommonCrypto
 import CoreBluetooth
 import Foundation
@@ -104,7 +104,8 @@ extension Ellipse {
     case ready
   }
   public enum RestoringStrategy {
-    case reconnect, disconnect
+    case reconnect
+    case disconnect
     public static func == (a: LattisSDK.Ellipse.RestoringStrategy, b: LattisSDK.Ellipse.RestoringStrategy) -> Swift.Bool
     public var hashValue: Swift.Int {
       get
@@ -112,7 +113,8 @@ extension Ellipse {
     public func hash(into hasher: inout Swift.Hasher)
   }
   public enum CachingStrategy {
-    case `default`, never
+    case `default`
+    case never
     public static func == (a: LattisSDK.Ellipse.CachingStrategy, b: LattisSDK.Ellipse.CachingStrategy) -> Swift.Bool
     public var hashValue: Swift.Int {
       get
@@ -175,19 +177,19 @@ extension Ellipse.Pin {
   @objc public func bootReset()
   public var isCapTouchEnabled: Swift.Bool? {
     get
-    set
+    set(newValue)
   }
   public var isMagnetAutoLockEnabled: Swift.Bool? {
     get
-    set
+    set(newValue)
   }
   @objc public var isShackleInserted: Swift.Bool {
     @objc get
-    @objc set
+    @objc set(newValue)
   }
   @objc public var isLEDBlinking: Swift.Bool {
     @objc get
-    @objc set
+    @objc set(newValue)
   }
   @objc public func readCapTouchState()
   @objc public func flashLED(completion: ((Swift.Error?) -> ())? = nil)
@@ -241,7 +243,7 @@ public protocol Network {
   func getPinCode(forLockWith macId: Swift.String, completion: @escaping (Swift.Result<[Swift.String], Swift.Error>) -> ())
 }
 @objc @objcMembers public class EllipseManager : ObjectiveC.NSObject {
-  @objc public static let shared: LattisSDK.EllipseManager
+  @objc public static var shared: LattisSDK.EllipseManager
   @objc public var locks: [LattisSDK.Ellipse] {
     @objc get
   }
@@ -253,7 +255,7 @@ public protocol Network {
   }
   @objc public static var secret: Swift.String? {
     @objc get
-    @objc set
+    @objc set(newValue)
   }
   public func scan(with handler: LattisSDK.EllipseManagerDelegate? = nil)
   public func subscribe(handler: LattisSDK.EllipseManagerDelegate)
@@ -308,7 +310,7 @@ extension Accelerometer {
     public let x: Swift.Float
     public let y: Swift.Float
     public let z: Swift.Float
-    public static let zero: LattisSDK.Accelerometer.Coordinate
+    public static var zero: LattisSDK.Accelerometer.Coordinate
   }
   public struct Value {
     public struct Limit {
@@ -323,12 +325,12 @@ extension Accelerometer {
     public let mav: LattisSDK.Accelerometer.Coordinate
     public let deviation: LattisSDK.Accelerometer.Coordinate
     public let sensitivity: Swift.Float
-    public static let zero: LattisSDK.Accelerometer.Value
+    public static var zero: LattisSDK.Accelerometer.Value
   }
   public struct Sensetivity {
-    public static let low: LattisSDK.Accelerometer.Sensetivity
-    public static let medium: LattisSDK.Accelerometer.Sensetivity
-    public static let high: LattisSDK.Accelerometer.Sensetivity
+    public static var low: LattisSDK.Accelerometer.Sensetivity
+    public static var medium: LattisSDK.Accelerometer.Sensetivity
+    public static var high: LattisSDK.Accelerometer.Sensetivity
   }
 }
 extension Accelerometer.Value {
@@ -426,11 +428,11 @@ extension Ellipse {
   }
   @objc dynamic public var objcIsCapTouchEnabled: Swift.Bool {
     @objc get
-    @objc set
+    @objc set(newValue)
   }
   @objc dynamic public var objcIsMagnetAutoLockEnabled: Swift.Bool {
     @objc get
-    @objc set
+    @objc set(newValue)
   }
   @objc dynamic public var objcSecurity: LattisSDK.LSEllipseSecurity {
     @objc get
@@ -461,31 +463,3 @@ extension Data {
   }
   public func sha256() -> Foundation.Data
 }
-extension LattisSDK.Ellipse.Service : Swift.Equatable {}
-extension LattisSDK.Ellipse.Service : Swift.Hashable {}
-extension LattisSDK.Ellipse.Service : Swift.RawRepresentable {}
-extension LattisSDK.Ellipse.Characteristic : Swift.Equatable {}
-extension LattisSDK.Ellipse.Characteristic : Swift.Hashable {}
-extension LattisSDK.Ellipse.Characteristic : Swift.RawRepresentable {}
-extension LattisSDK.Ellipse.Security : Swift.Equatable {}
-extension LattisSDK.Ellipse.Security : Swift.Hashable {}
-extension LattisSDK.Ellipse.Security : Swift.RawRepresentable {}
-extension LattisSDK.Ellipse.Pin : Swift.Equatable {}
-extension LattisSDK.Ellipse.Pin : Swift.Hashable {}
-extension LattisSDK.Ellipse.Pin : Swift.RawRepresentable {}
-extension LattisSDK.Ellipse.Byte : Swift.Equatable {}
-extension LattisSDK.Ellipse.Byte : Swift.Hashable {}
-extension LattisSDK.Ellipse.Byte : Swift.RawRepresentable {}
-extension LattisSDK.Ellipse.RestoringStrategy : Swift.Equatable {}
-extension LattisSDK.Ellipse.RestoringStrategy : Swift.Hashable {}
-extension LattisSDK.Ellipse.CachingStrategy : Swift.Equatable {}
-extension LattisSDK.Ellipse.CachingStrategy : Swift.Hashable {}
-extension LattisSDK.LSEllipseConnection : Swift.Equatable {}
-extension LattisSDK.LSEllipseConnection : Swift.Hashable {}
-extension LattisSDK.LSEllipseConnection : Swift.RawRepresentable {}
-extension LattisSDK.LSEllipseSecurity : Swift.Equatable {}
-extension LattisSDK.LSEllipseSecurity : Swift.Hashable {}
-extension LattisSDK.LSEllipseSecurity : Swift.RawRepresentable {}
-extension LattisSDK.LSEllipseValue : Swift.Equatable {}
-extension LattisSDK.LSEllipseValue : Swift.Hashable {}
-extension LattisSDK.LSEllipseValue : Swift.RawRepresentable {}
