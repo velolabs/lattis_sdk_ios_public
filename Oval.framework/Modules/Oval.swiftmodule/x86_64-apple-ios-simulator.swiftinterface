@@ -1,0 +1,145 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Oval
+import Foundation
+@_exported import Oval
+import Swift
+public protocol SensetiveStorage {
+  var restToken: Swift.String? { get set }
+  var refreshToken: Swift.String? { get set }
+  var userId: Swift.Int? { get set }
+}
+extension UserDefaults : Oval.SensetiveStorage {
+  public var restToken: Swift.String? {
+    get
+    set
+  }
+  public var refreshToken: Swift.String? {
+    get
+    set
+  }
+  public var userId: Swift.Int? {
+    get
+    set
+  }
+}
+public struct API {
+  public let url: Foundation.URL
+  public init(endpoint: Swift.String? = nil, version: Oval.API.Version = .none, path: Swift.String)
+  public init(url: Foundation.URL)
+  public enum Version : Swift.String {
+    case none
+    case v1
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+public struct Request<A> where A : Swift.Encodable {
+  public let content: Oval.Content<A>
+  public let api: Oval.API
+  public static func get(_ api: Oval.API, headers: [Swift.String : Swift.String] = [:]) -> Oval.Request<Oval.Empty>
+  public static func delete(_ api: Oval.API, headers: [Swift.String : Swift.String] = [:]) -> Oval.Request<Oval.Empty>
+  public static func delete<A>(_ params: A, api: Oval.API, headers: [Swift.String : Swift.String] = [:]) -> Oval.Request<A> where A : Swift.Encodable
+  public static func put<A>(_ params: A, api: Oval.API, headers: [Swift.String : Swift.String] = [:]) -> Oval.Request<A> where A : Swift.Encodable
+  public static func post<A>(json params: A, api: Oval.API, headers: [Swift.String : Swift.String] = [:]) -> Oval.Request<A> where A : Swift.Encodable
+  public static func update<A>(_ params: A, api: Oval.API, headers: [Swift.String : Swift.String] = [:]) -> Oval.Request<A> where A : Swift.Encodable
+  public static func post(multipart: Oval.Multipart, api: Oval.API, headers: [Swift.String : Swift.String] = [:]) -> Oval.Request<Oval.Empty>
+}
+public enum Content<A> {
+  case empty
+  case json(A)
+  case multipart(Oval.Multipart)
+}
+public struct Multipart {
+  public let data: Foundation.Data
+  public let mimeType: Oval.Multipart.MimeType
+  public let params: [Swift.String : Swift.String]
+  public let filename: Swift.String
+  public let boundary: Swift.String
+  public init(data: Foundation.Data, mimeType: Oval.Multipart.MimeType = .imageJpg, params: [Swift.String : Swift.String] = [:], filename: Swift.String = UUID().uuidString.lowercased(), boundary: Swift.String = UUID().uuidString)
+  public enum MimeType : Swift.String {
+    case imageJpg
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+public struct Empty : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+open class Session {
+  public static let shared: Oval.Session
+  public var storage: Oval.SensetiveStorage
+  public init(storage: Oval.SensetiveStorage = Session.shared.storage)
+  public func logout()
+  @discardableResult
+  public func download(by url: Foundation.URL, completion: @escaping (Swift.Result<Foundation.Data, Swift.Error>) -> ()) -> Foundation.URLSessionTask
+  @discardableResult
+  public func send<A>(_ request: Oval.Request<A>, envelope: Swift.Bool = true, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> ()) -> Foundation.URLSessionTask? where A : Swift.Encodable
+  @discardableResult
+  public func send<A, B>(_ request: Oval.Request<A>, envelope: Swift.Bool = true, completion: @escaping (Swift.Result<B, Swift.Error>) -> ()) -> Foundation.URLSessionTask? where A : Swift.Encodable, B : Swift.Decodable
+  @objc deinit
+}
+public struct ServerError : Foundation.LocalizedError, Swift.Decodable {
+  public let code: Swift.Int
+  public let message: Swift.String
+  public let name: Swift.String
+  public let api: Oval.API?
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension ServerError {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SessionError : Foundation.LocalizedError {
+  public let code: Oval.SessionError.Code
+  public let api: Oval.API
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public func check(_ errors: Oval.SessionError.Code...) -> Swift.Bool
+}
+extension SessionError {
+  public enum Code : Foundation.LocalizedError {
+    case unexpectedResponse
+    case emptyData
+    case refreshFailed(Swift.Int?, Swift.String?)
+    case badRequest
+    case unauthorized
+    case forbidden
+    case resourceNotFound
+    case methodNotAllowed
+    case conflict
+    case lengthRequired
+    case invalidToken
+    case internalServer
+    case decodingFailed(Swift.String)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+}
+extension SessionError.Code : Swift.Equatable {
+}
+public func == (lhs: Oval.SessionError.Code, rhs: Oval.SessionError.Code) -> Swift.Bool
+extension Error {
+  public var asNSError: Foundation.NSError {
+    get
+  }
+}
+public struct Token : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+extension Oval.API.Version : Swift.Equatable {}
+extension Oval.API.Version : Swift.Hashable {}
+extension Oval.API.Version : Swift.RawRepresentable {}
+extension Oval.Multipart.MimeType : Swift.Equatable {}
+extension Oval.Multipart.MimeType : Swift.Hashable {}
+extension Oval.Multipart.MimeType : Swift.RawRepresentable {}

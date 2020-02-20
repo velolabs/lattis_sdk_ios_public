@@ -8,7 +8,6 @@
 
 import UIKit
 import LattisSDK
-import Oval
 import GradientCircularProgress
 
 class RootViewController: UITableViewController {

@@ -16,11 +16,7 @@
 		F17AAA45202657010062A679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17AAA44202657010062A679 /* AppDelegate.swift */; };
 		F17AAA4C202657010062A679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17AAA4B202657010062A679 /* Assets.xcassets */; };
 		F17AAA4F202657010062A679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17AAA4D202657010062A679 /* LaunchScreen.storyboard */; };
-		F17AAA5A202657380062A679 /* LattisSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17AAA562026571A0062A679 /* LattisSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F17AAA5B202657380062A679 /* LattisSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F17AAA562026571A0062A679 /* LattisSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F191FB67223A9050002A8AB7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F191FB66223A9050002A8AB7 /* README.md */; };
-		F1F3ADA12119EA21005F8A0D /* Oval.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F3ADA02119EA21005F8A0D /* Oval.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F1F3ADA32119EA2F005F8A0D /* Oval.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1F3ADA02119EA21005F8A0D /* Oval.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,8 +26,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F17AAA5B202657380062A679 /* LattisSDK.framework in Embed Frameworks */,
-				F1F3ADA32119EA2F005F8A0D /* Oval.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,10 +46,8 @@
 		F17AAA4B202657010062A679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F17AAA4E202657010062A679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F17AAA50202657010062A679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F17AAA562026571A0062A679 /* LattisSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LattisSDK.framework; path = ../../LattisSDK.framework; sourceTree = "<group>"; };
 		F191FB66223A9050002A8AB7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F1E807C7212D96AE0031F06A /* LattisSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = LattisSDK.podspec; path = ../LattisSDK.podspec; sourceTree = "<group>"; };
-		F1F3ADA02119EA21005F8A0D /* Oval.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Oval.framework; path = ../../Oval.framework; sourceTree = "<group>"; };
+		F1E807C7212D96AE0031F06A /* LattisSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = LattisSDK.podspec; path = ../LattisSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1F3ADA12119EA21005F8A0D /* Oval.framework in Frameworks */,
-				F17AAA5A202657380062A679 /* LattisSDK.framework in Frameworks */,
 				57C9BAF2D725E8EB18BCB723 /* Pods_Lattis_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,8 +102,6 @@
 		F17AAA43202657010062A679 /* Lattis Demo */ = {
 			isa = PBXGroup;
 			children = (
-				F1F3ADA02119EA21005F8A0D /* Oval.framework */,
-				F17AAA562026571A0062A679 /* LattisSDK.framework */,
 				F17AAA44202657010062A679 /* AppDelegate.swift */,
 				F141D8A021493A56001B6126 /* EllipseTableCell.swift */,
 				F141D8A121493A56001B6126 /* EllipseViewController.swift */,
@@ -212,15 +200,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Lattis Demo/Pods-Lattis Demo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/GradientCircularProgress/GradientCircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/LattisSDK/LattisSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/Oval/Oval.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientCircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LattisSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Oval.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

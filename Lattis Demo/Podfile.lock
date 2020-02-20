@@ -1,32 +1,48 @@
 PODS:
-  - CryptoSwift (1.0.0)
   - GradientCircularProgress (3.13.0)
-  - KeychainSwift (16.0.1)
+  - KeychainSwift (19.0.0)
+  - LattisSDK (2.2.3):
+    - KeychainSwift
+    - Oval
+  - Oval (2.1.2)
 
 DEPENDENCIES:
-  - CryptoSwift
   - GradientCircularProgress (from `https://github.com/keygx/GradientCircularProgress`)
   - KeychainSwift
+  - "LattisSDK (from `git@github.com:velolabs/lattis_sdk_ios.git`, branch `develop`)"
+  - "Oval (from `git@github.com:velolabs/oval_ios.git`, branch `develop`)"
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - CryptoSwift
+  trunk:
     - KeychainSwift
 
 EXTERNAL SOURCES:
   GradientCircularProgress:
     :git: https://github.com/keygx/GradientCircularProgress
+  LattisSDK:
+    :branch: develop
+    :git: "git@github.com:velolabs/lattis_sdk_ios.git"
+  Oval:
+    :branch: develop
+    :git: "git@github.com:velolabs/oval_ios.git"
 
 CHECKOUT OPTIONS:
   GradientCircularProgress:
     :commit: 9e2dc60d335ee6eb3677bfd9f965f0ade3607f4c
     :git: https://github.com/keygx/GradientCircularProgress
+  LattisSDK:
+    :commit: b5ef6fbb5c16502c7fc14d46efb8ca116ce831dd
+    :git: "git@github.com:velolabs/lattis_sdk_ios.git"
+  Oval:
+    :commit: 288352559ad9e739b573ef6cd978879af222f2fd
+    :git: "git@github.com:velolabs/oval_ios.git"
 
 SPEC CHECKSUMS:
-  CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
   GradientCircularProgress: f5a04b862adc1fbafbd21c0ff450ed7d74d1926e
-  KeychainSwift: 4209611373ca4a098e09b1e547eebd87c544dcc4
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  LattisSDK: d8f488cdb1e79a8511c79ad8c1dc58aaf9daf5d5
+  Oval: 3646fd316f95c1c29cad9eee2202704891d70482
 
-PODFILE CHECKSUM: 164daa464c249850f65ef9c85abf17148a43e457
+PODFILE CHECKSUM: 2fe94419cd4bc2462e06011c03ab3cbbf90f05a0
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4

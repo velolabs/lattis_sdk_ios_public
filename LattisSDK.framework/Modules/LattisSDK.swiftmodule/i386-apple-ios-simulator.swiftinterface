@@ -1,0 +1,491 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name LattisSDK
+import CommonCrypto
+import CoreBluetooth
+import Foundation
+import KeychainSwift
+@_exported import LattisSDK
+import Oval
+import Swift
+extension Ellipse {
+  public enum Service : Swift.String {
+    case security
+    case hardware
+    case configuration
+    case test
+    case boot
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Characteristic : Swift.String {
+    case LED
+    case lock
+    case hardwareInfo
+    case connection
+    case magnet
+    case accelerometer
+    case signedMessage
+    case publicKey
+    case challengeKey
+    case challengeData
+    case firmwareVersion
+    case writeFirmware
+    case writeFirmwareNotification
+    case firmwareUpdateDone
+    case resetLock
+    case serialNumber
+    case capTouch
+    case buttonSequece
+    case commandStatus
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Security : Swift.UInt8 {
+    case unlocked
+    case locked
+    case middle
+    case invalid
+    case auto
+    public typealias RawValue = Swift.UInt8
+    public init?(rawValue: Swift.UInt8)
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  public enum Pin : Swift.UInt8 {
+    case up
+    case right
+    case down
+    case left
+    public typealias RawValue = Swift.UInt8
+    public init?(rawValue: Swift.UInt8)
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  public enum Byte : Swift.UInt8 {
+    case null
+    case reset
+    case factoryReset
+    case securityOwnerVerified
+    case securityGuest
+    case securityOwner
+    case securityGuestVerified
+    case invalidLenghtWriteIgnored
+    case accessDenied
+    case lockUnlockFailed
+    case invalidOffcet
+    case invalidWriteLenght
+    case invalidParameter
+    case commandInProgress
+    public typealias RawValue = Swift.UInt8
+    public init?(rawValue: Swift.UInt8)
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  public enum Connection {
+    case paired
+    case unpaired
+    case connecting
+    case reconnecting
+    case flashingLED
+    case manageCapTouch
+    case failed(Swift.Error)
+    case updating(Swift.Float)
+    case restored
+    case ready
+  }
+  public enum RestoringStrategy {
+    case reconnect, disconnect
+    public static func == (a: LattisSDK.Ellipse.RestoringStrategy, b: LattisSDK.Ellipse.RestoringStrategy) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public enum CachingStrategy {
+    case `default`, never
+    public static func == (a: LattisSDK.Ellipse.CachingStrategy, b: LattisSDK.Ellipse.CachingStrategy) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+}
+extension Ellipse.Pin {
+  public var stringValue: Swift.String {
+    get
+  }
+}
+@objc @objcMembers public class Ellipse : ObjectiveC.NSObject {
+  @objc final public let macId: Swift.String
+  @objc final public let name: Swift.String
+  final public let accelerometer: LattisSDK.Accelerometer
+  public var metadata: LattisSDK.Ellipse.Metadata? {
+    get
+  }
+  public var magnet: LattisSDK.Accelerometer.Coordinate {
+    get
+  }
+  @objc public var isPaired: Swift.Bool {
+    @objc get
+  }
+  @objc public var isUpdated: Swift.Bool {
+    @objc get
+  }
+  @objc public var firmwareVersion: Swift.String? {
+    get
+    }
+  @objc public var bootloaderVersion: Swift.String? {
+    get
+    }
+  @objc public var serialNumber: Swift.String? {
+    get
+    }
+  @objc public var isFactoryMode: Swift.Bool {
+    get
+    }
+  public var connection: LattisSDK.Ellipse.Connection {
+    get
+  }
+  public var security: LattisSDK.Ellipse.Security {
+    get
+  }
+  public func connect(handler: LattisSDK.EllipseDelegate? = nil, secret: Swift.String? = nil)
+  @objc public func disconnect()
+  public func subscribe(_ handler: LattisSDK.EllipseDelegate, theft: LattisSDK.TheftPresentable? = nil, crash: LattisSDK.CrashPresentable? = nil)
+  public func unsubscribe(_ handler: LattisSDK.EllipseDelegate)
+  @objc public func lock()
+  @objc public func unlock()
+  @objc public func enableAutoLock()
+  @objc public func checkSecurityStatus()
+  public func set(pinCode: [LattisSDK.Ellipse.Pin]) throws
+  @objc public func updateWith(contentsOf url: Foundation.URL) throws
+  @objc public func update(firmware: [Swift.UInt8])
+  @objc public func cleanCache()
+  @objc public func factoryReset(disconnect: Swift.Bool = false)
+  @objc public func bootReset()
+  public var isCapTouchEnabled: Swift.Bool? {
+    get
+    set
+  }
+  public var isMagnetAutoLockEnabled: Swift.Bool? {
+    get
+    set
+  }
+  @objc public var isShackleInserted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isLEDBlinking: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public func readCapTouchState()
+  @objc public func flashLED(completion: ((Swift.Error?) -> ())? = nil)
+  public func unlock(with pin: [LattisSDK.Ellipse.Pin])
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Ellipse : CoreBluetooth.CBPeripheralDelegate {
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+}
+public protocol EllipseManagerDelegate : AnyObject {
+  func manager(_ lockManager: LattisSDK.EllipseManager, didRestoreConnected locks: [LattisSDK.Ellipse])
+  func manager(_ lockManager: LattisSDK.EllipseManager, didUpdateLocks insert: [LattisSDK.Ellipse], delete: [LattisSDK.Ellipse])
+  func manager(_ lockManager: LattisSDK.EllipseManager, didUpdateConnectionState connected: Swift.Bool)
+}
+extension EllipseManagerDelegate {
+  public func manager(_ lockManager: LattisSDK.EllipseManager, didRestoreConnected locks: [LattisSDK.Ellipse])
+  public func manager(_ lockManager: LattisSDK.EllipseManager, didUpdateLocks insert: [LattisSDK.Ellipse], delete: [LattisSDK.Ellipse])
+  public func manager(_ lockManager: LattisSDK.EllipseManager, didUpdateConnectionState connected: Swift.Bool)
+}
+extension Ellipse {
+  public enum Value {
+    case firmwareVersion(Swift.String)
+    case serialNumber(Swift.String)
+    case metadata(LattisSDK.Ellipse.Metadata)
+    case magnet(LattisSDK.Accelerometer.Coordinate)
+    case accelerometer(LattisSDK.Accelerometer.Value)
+    case capTouchEnabled(Swift.Bool)
+    case shackleInserted(Swift.Bool)
+    case magnetAutoLockEnabled(Swift.Bool)
+  }
+}
+public protocol EllipseDelegate : AnyObject {
+  func ellipse(_ ellipse: LattisSDK.Ellipse, didUpdate connection: LattisSDK.Ellipse.Connection)
+  func ellipse(_ ellipse: LattisSDK.Ellipse, didUpdate security: LattisSDK.Ellipse.Security)
+  func ellipse(_ ellipse: LattisSDK.Ellipse, didUpdate value: LattisSDK.Ellipse.Value)
+}
+extension EllipseDelegate {
+  public func ellipse(_ ellipse: LattisSDK.Ellipse, didUpdate value: LattisSDK.Ellipse.Value)
+}
+public protocol Network {
+  func sign(lockWith macId: Swift.String, completion: @escaping (Swift.Result<(Swift.String, Swift.String), Swift.Error>) -> ())
+  func firmvareVersions(completion: @escaping (Swift.Result<[Swift.String], Swift.Error>) -> ())
+  func firmvare(version: Swift.String?, completion: @escaping (Swift.Result<[Swift.UInt8], Swift.Error>) -> ())
+  func firmvareChangeLog(for version: Swift.String?, completion: @escaping (Swift.Result<[Swift.String], Swift.Error>) -> ())
+  func save(pinCode: [Swift.String], forLock macId: Swift.String, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> ())
+  func getPinCode(forLockWith macId: Swift.String, completion: @escaping (Swift.Result<[Swift.String], Swift.Error>) -> ())
+}
+@objc @objcMembers public class EllipseManager : ObjectiveC.NSObject {
+  @objc public static let shared: LattisSDK.EllipseManager
+  @objc public var locks: [LattisSDK.Ellipse] {
+    @objc get
+  }
+  public var network: LattisSDK.Network
+  public var restoringStrategy: LattisSDK.Ellipse.RestoringStrategy
+  public var cashingStrategy: LattisSDK.Ellipse.CachingStrategy
+  @objc public var isOn: Swift.Bool {
+    @objc get
+  }
+  @objc public static var secret: Swift.String? {
+    @objc get
+    @objc set
+  }
+  public func scan(with handler: LattisSDK.EllipseManagerDelegate? = nil)
+  public func subscribe(handler: LattisSDK.EllipseManagerDelegate)
+  @objc public func stopScan()
+  @objc public func disconnect(ellipse: LattisSDK.Ellipse)
+  @objc public func clean()
+  @objc deinit
+}
+extension EllipseManager : CoreBluetooth.CBCentralManagerDelegate {
+  @objc dynamic public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didConnect peripheral: CoreBluetooth.CBPeripheral)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didFailToConnect peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, willRestoreState dict: [Swift.String : Any])
+}
+public enum EllipseError : Foundation.LocalizedError {
+  case missingService(LattisSDK.Ellipse.Service)
+  case missingCharacteristic(LattisSDK.Ellipse.Characteristic)
+  case missingChallengeData
+  case missingChallengeKey
+  case missingPublicKey
+  case missingSignedMessage
+  case wrongChallengeData(Swift.String)
+  case accessDenided
+  case pinCodeNotFound(Swift.String)
+  case wrongPinCode([LattisSDK.Ellipse.Pin])
+  case timeout
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension Error {
+  public var isEllipseTimeout: Swift.Bool {
+    get
+  }
+}
+final public class Accelerometer {
+  final public var theftLimit: LattisSDK.Accelerometer.Sensetivity
+  final public var crashLimit: LattisSDK.Accelerometer.Sensetivity
+  final public var value: LattisSDK.Accelerometer.Value {
+    get
+    }
+  final public func subscribeTheft(handler: LattisSDK.TheftPresentable)
+  final public func unsubscribeTheft(handler: LattisSDK.TheftPresentable)
+  final public func subscribeCrash(handler: LattisSDK.CrashPresentable)
+  final public func unsubscribeCrash(handler: LattisSDK.CrashPresentable)
+  @objc deinit
+}
+extension Accelerometer {
+  public struct Coordinate {
+    public let x: Swift.Float
+    public let y: Swift.Float
+    public let z: Swift.Float
+    public static let zero: LattisSDK.Accelerometer.Coordinate
+  }
+  public struct Value {
+    public struct Limit {
+      public let min: Swift.Float
+      public let max: Swift.Float
+      public var sensetivity: Swift.Float
+      public var signalCount: Swift.Int
+      public var threshold: Swift.Float {
+        get
+      }
+    }
+    public let mav: LattisSDK.Accelerometer.Coordinate
+    public let deviation: LattisSDK.Accelerometer.Coordinate
+    public let sensitivity: Swift.Float
+    public static let zero: LattisSDK.Accelerometer.Value
+  }
+  public struct Sensetivity {
+    public static let low: LattisSDK.Accelerometer.Sensetivity
+    public static let medium: LattisSDK.Accelerometer.Sensetivity
+    public static let high: LattisSDK.Accelerometer.Sensetivity
+  }
+}
+extension Accelerometer.Value {
+  public init?(_ data: Foundation.Data)
+  public func isSignal(threshold: Swift.Float) -> Swift.Bool
+}
+public protocol TheftPresentable : ObjectiveC.NSObjectProtocol {
+  func handleTheft(value: LattisSDK.Accelerometer.Value, for ellipse: LattisSDK.Ellipse)
+}
+public protocol CrashPresentable : ObjectiveC.NSObjectProtocol {
+  func handleCrash(value: LattisSDK.Accelerometer.Value, for ellipse: LattisSDK.Ellipse)
+}
+extension Accelerometer.Sensetivity : Swift.Equatable {
+}
+public func == (lhs: LattisSDK.Accelerometer.Sensetivity, rhs: LattisSDK.Accelerometer.Sensetivity) -> Swift.Bool
+extension Accelerometer.Sensetivity {
+  public init(_ value: Swift.Int)
+}
+extension Ellipse {
+  public struct Metadata {
+    public var voltage: Swift.Float
+    public var temperature: Swift.Double
+    public var rssi: Swift.Double
+    public var security: LattisSDK.Ellipse.Security
+    public var isCharging: Swift.Bool
+    public var batteryLevel: Swift.Double {
+      get
+    }
+    public var signalLevel: Swift.Double {
+      get
+    }
+  }
+}
+@objc public enum LSEllipseConnection : Swift.Int {
+  case paired
+  case unpaired
+  case connecting
+  case reconnecting
+  case flashingLED
+  case manageCapTouch
+  case failed
+  case updating
+  case restored
+  case ready
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum LSEllipseSecurity : Swift.Int {
+  case unlocked
+  case locked
+  case middle
+  case invalid
+  case auto
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum LSEllipseValue : Swift.Int {
+  case firmwareVersion
+  case serialNumber
+  case capTouchEnabled
+  case shackleInserted
+  case magnetAutoLockEnabled
+  case batteryLevel
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol LSEllipseManagerDelegate : AnyObject {
+  @objc func manager(_ lockManager: LattisSDK.EllipseManager, didRestoreConnected locks: [LattisSDK.Ellipse])
+  @objc func manager(_ lockManager: LattisSDK.EllipseManager, didUpdateLocks insert: [LattisSDK.Ellipse], delete: [LattisSDK.Ellipse])
+  @objc func manager(_ lockManager: LattisSDK.EllipseManager, didUpdateConnectionState connected: Swift.Bool)
+}
+@objc public protocol LSEllipseDelegate : AnyObject {
+  @objc func ellipse(_ ellipse: LattisSDK.Ellipse, didUpdate connection: LattisSDK.LSEllipseConnection, error: Swift.Error?)
+  @objc func ellipse(_ ellipse: LattisSDK.Ellipse, didUpdate security: LattisSDK.LSEllipseSecurity)
+  @objc func ellipse(_ ellipse: LattisSDK.Ellipse, didUpdate value: Any, with valueType: LattisSDK.LSEllipseValue)
+}
+extension Ellipse {
+  @objc dynamic public func connect(handler: LattisSDK.LSEllipseDelegate)
+  @objc dynamic public func subscribe(_ handler: LattisSDK.LSEllipseDelegate)
+  @objc dynamic public func unsubscribe(_ handler: LattisSDK.LSEllipseDelegate)
+  @objc dynamic public var connectionState: LattisSDK.LSEllipseConnection {
+    @objc get
+  }
+  @objc dynamic public var securityState: LattisSDK.LSEllipseSecurity {
+    @objc get
+  }
+  @objc dynamic public var objcIsCapTouchEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc dynamic public var objcIsMagnetAutoLockEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc dynamic public var objcSecurity: LattisSDK.LSEllipseSecurity {
+    @objc get
+  }
+}
+extension EllipseManager {
+  @objc dynamic public func scan(with handler: LattisSDK.LSEllipseManagerDelegate)
+  @objc dynamic public func startScan()
+  @objc dynamic public func subscribe(delegate: LattisSDK.LSEllipseManagerDelegate)
+}
+extension String {
+  public var dataValue: Foundation.Data? {
+    get
+  }
+  public var bytesArray: [Swift.UInt8]? {
+    get
+  }
+}
+extension Data {
+  public var ellipseVersion: Swift.String? {
+    get
+  }
+  public var bootLoaderVersion: Swift.String? {
+    get
+  }
+  public var hex: Swift.String {
+    get
+  }
+  public func sha256() -> Foundation.Data
+}
+extension LattisSDK.Ellipse.Service : Swift.Equatable {}
+extension LattisSDK.Ellipse.Service : Swift.Hashable {}
+extension LattisSDK.Ellipse.Service : Swift.RawRepresentable {}
+extension LattisSDK.Ellipse.Characteristic : Swift.Equatable {}
+extension LattisSDK.Ellipse.Characteristic : Swift.Hashable {}
+extension LattisSDK.Ellipse.Characteristic : Swift.RawRepresentable {}
+extension LattisSDK.Ellipse.Security : Swift.Equatable {}
+extension LattisSDK.Ellipse.Security : Swift.Hashable {}
+extension LattisSDK.Ellipse.Security : Swift.RawRepresentable {}
+extension LattisSDK.Ellipse.Pin : Swift.Equatable {}
+extension LattisSDK.Ellipse.Pin : Swift.Hashable {}
+extension LattisSDK.Ellipse.Pin : Swift.RawRepresentable {}
+extension LattisSDK.Ellipse.Byte : Swift.Equatable {}
+extension LattisSDK.Ellipse.Byte : Swift.Hashable {}
+extension LattisSDK.Ellipse.Byte : Swift.RawRepresentable {}
+extension LattisSDK.Ellipse.RestoringStrategy : Swift.Equatable {}
+extension LattisSDK.Ellipse.RestoringStrategy : Swift.Hashable {}
+extension LattisSDK.Ellipse.CachingStrategy : Swift.Equatable {}
+extension LattisSDK.Ellipse.CachingStrategy : Swift.Hashable {}
+extension LattisSDK.LSEllipseConnection : Swift.Equatable {}
+extension LattisSDK.LSEllipseConnection : Swift.Hashable {}
+extension LattisSDK.LSEllipseConnection : Swift.RawRepresentable {}
+extension LattisSDK.LSEllipseSecurity : Swift.Equatable {}
+extension LattisSDK.LSEllipseSecurity : Swift.Hashable {}
+extension LattisSDK.LSEllipseSecurity : Swift.RawRepresentable {}
+extension LattisSDK.LSEllipseValue : Swift.Equatable {}
+extension LattisSDK.LSEllipseValue : Swift.Hashable {}
+extension LattisSDK.LSEllipseValue : Swift.RawRepresentable {}
