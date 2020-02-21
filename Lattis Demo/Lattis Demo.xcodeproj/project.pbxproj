@@ -202,8 +202,8 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Lattis Demo/Pods-Lattis Demo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GradientCircularProgress/GradientCircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/LattisSDK/LattisSDK.framework",
-				"${BUILT_PRODUCTS_DIR}/Oval/Oval.framework",
+				"${PODS_ROOT}/../../LattisSDK.framework",
+				"${PODS_ROOT}/../../Oval.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -385,7 +385,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/KeychainSwift\"",
-					"$(PROJECT_DIR)/..",
 				);
 				INFOPLIST_FILE = "Lattis Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -407,7 +406,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/KeychainSwift\"",
-					"$(PROJECT_DIR)/..",
 				);
 				INFOPLIST_FILE = "Lattis Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
