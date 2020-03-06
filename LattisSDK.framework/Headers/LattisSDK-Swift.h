@@ -343,7 +343,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable sec
 - (void)centralManager:(CBCentralManager * _Nonnull)central willRestoreState:(NSDictionary<NSString *, id> * _Nonnull)dict;
 @end
 
-typedef SWIFT_ENUM(NSInteger, LSEllipseConnection, closed) {
+typedef SWIFT_ENUM(NSInteger, LSEllipseConnection, open) {
   LSEllipseConnectionPaired = 0,
   LSEllipseConnectionUnpaired = 1,
   LSEllipseConnectionConnecting = 2,
@@ -373,7 +373,7 @@ SWIFT_PROTOCOL("_TtP9LattisSDK24LSEllipseManagerDelegate_")
 - (void)manager:(EllipseManager * _Nonnull)lockManager didUpdateConnectionState:(BOOL)connected;
 @end
 
-typedef SWIFT_ENUM(NSInteger, LSEllipseSecurity, closed) {
+typedef SWIFT_ENUM(NSInteger, LSEllipseSecurity, open) {
   LSEllipseSecurityUnlocked = 0,
   LSEllipseSecurityLocked = 1,
   LSEllipseSecurityMiddle = 2,
@@ -381,7 +381,7 @@ typedef SWIFT_ENUM(NSInteger, LSEllipseSecurity, closed) {
   LSEllipseSecurityAuto = 4,
 };
 
-typedef SWIFT_ENUM(NSInteger, LSEllipseValue, closed) {
+typedef SWIFT_ENUM(NSInteger, LSEllipseValue, open) {
   LSEllipseValueFirmwareVersion = 0,
   LSEllipseValueSerialNumber = 1,
   LSEllipseValueCapTouchEnabled = 2,
@@ -735,7 +735,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable sec
 - (void)centralManager:(CBCentralManager * _Nonnull)central willRestoreState:(NSDictionary<NSString *, id> * _Nonnull)dict;
 @end
 
-typedef SWIFT_ENUM(NSInteger, LSEllipseConnection, closed) {
+typedef SWIFT_ENUM(NSInteger, LSEllipseConnection, open) {
   LSEllipseConnectionPaired = 0,
   LSEllipseConnectionUnpaired = 1,
   LSEllipseConnectionConnecting = 2,
@@ -765,7 +765,7 @@ SWIFT_PROTOCOL("_TtP9LattisSDK24LSEllipseManagerDelegate_")
 - (void)manager:(EllipseManager * _Nonnull)lockManager didUpdateConnectionState:(BOOL)connected;
 @end
 
-typedef SWIFT_ENUM(NSInteger, LSEllipseSecurity, closed) {
+typedef SWIFT_ENUM(NSInteger, LSEllipseSecurity, open) {
   LSEllipseSecurityUnlocked = 0,
   LSEllipseSecurityLocked = 1,
   LSEllipseSecurityMiddle = 2,
@@ -773,7 +773,7 @@ typedef SWIFT_ENUM(NSInteger, LSEllipseSecurity, closed) {
   LSEllipseSecurityAuto = 4,
 };
 
-typedef SWIFT_ENUM(NSInteger, LSEllipseValue, closed) {
+typedef SWIFT_ENUM(NSInteger, LSEllipseValue, open) {
   LSEllipseValueFirmwareVersion = 0,
   LSEllipseValueSerialNumber = 1,
   LSEllipseValueCapTouchEnabled = 2,
@@ -1131,7 +1131,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable sec
 - (void)centralManager:(CBCentralManager * _Nonnull)central willRestoreState:(NSDictionary<NSString *, id> * _Nonnull)dict;
 @end
 
-typedef SWIFT_ENUM(NSInteger, LSEllipseConnection, closed) {
+typedef SWIFT_ENUM(NSInteger, LSEllipseConnection, open) {
   LSEllipseConnectionPaired = 0,
   LSEllipseConnectionUnpaired = 1,
   LSEllipseConnectionConnecting = 2,
@@ -1161,7 +1161,7 @@ SWIFT_PROTOCOL("_TtP9LattisSDK24LSEllipseManagerDelegate_")
 - (void)manager:(EllipseManager * _Nonnull)lockManager didUpdateConnectionState:(BOOL)connected;
 @end
 
-typedef SWIFT_ENUM(NSInteger, LSEllipseSecurity, closed) {
+typedef SWIFT_ENUM(NSInteger, LSEllipseSecurity, open) {
   LSEllipseSecurityUnlocked = 0,
   LSEllipseSecurityLocked = 1,
   LSEllipseSecurityMiddle = 2,
@@ -1169,7 +1169,7 @@ typedef SWIFT_ENUM(NSInteger, LSEllipseSecurity, closed) {
   LSEllipseSecurityAuto = 4,
 };
 
-typedef SWIFT_ENUM(NSInteger, LSEllipseValue, closed) {
+typedef SWIFT_ENUM(NSInteger, LSEllipseValue, open) {
   LSEllipseValueFirmwareVersion = 0,
   LSEllipseValueSerialNumber = 1,
   LSEllipseValueCapTouchEnabled = 2,
@@ -1523,7 +1523,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable sec
 - (void)centralManager:(CBCentralManager * _Nonnull)central willRestoreState:(NSDictionary<NSString *, id> * _Nonnull)dict;
 @end
 
-typedef SWIFT_ENUM(NSInteger, LSEllipseConnection, closed) {
+typedef SWIFT_ENUM(NSInteger, LSEllipseConnection, open) {
   LSEllipseConnectionPaired = 0,
   LSEllipseConnectionUnpaired = 1,
   LSEllipseConnectionConnecting = 2,
@@ -1553,7 +1553,7 @@ SWIFT_PROTOCOL("_TtP9LattisSDK24LSEllipseManagerDelegate_")
 - (void)manager:(EllipseManager * _Nonnull)lockManager didUpdateConnectionState:(BOOL)connected;
 @end
 
-typedef SWIFT_ENUM(NSInteger, LSEllipseSecurity, closed) {
+typedef SWIFT_ENUM(NSInteger, LSEllipseSecurity, open) {
   LSEllipseSecurityUnlocked = 0,
   LSEllipseSecurityLocked = 1,
   LSEllipseSecurityMiddle = 2,
@@ -1561,7 +1561,7 @@ typedef SWIFT_ENUM(NSInteger, LSEllipseSecurity, closed) {
   LSEllipseSecurityAuto = 4,
 };
 
-typedef SWIFT_ENUM(NSInteger, LSEllipseValue, closed) {
+typedef SWIFT_ENUM(NSInteger, LSEllipseValue, open) {
   LSEllipseValueFirmwareVersion = 0,
   LSEllipseValueSerialNumber = 1,
   LSEllipseValueCapTouchEnabled = 2,
