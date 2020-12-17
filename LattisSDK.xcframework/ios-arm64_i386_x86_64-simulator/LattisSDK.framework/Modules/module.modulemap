@@ -1,0 +1,11 @@
+framework module LattisSDK {
+  umbrella header "LattisSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module LattisSDK.Swift {
+    header "LattisSDK-Swift.h"
+    requires objc
+}

@@ -171,6 +171,14 @@ RCT_EXPORT_METHOD(disableCapTouch:(NSString *)macId) {
   [self ellipse:macId].objcIsCapTouchEnabled = NO;
 }
 
+RCT_EXPORT_METHOD(enableExtraOpenTime:(NSString *)macId) {
+  [self ellipse:macId].objcExtraOpenTime = YES;
+}
+
+RCT_EXPORT_METHOD(disableExtraOpenTime:(NSString *)macId) {
+  [self ellipse:macId].objcExtraOpenTime = NO;
+}
+
 
 - (Ellipse *)ellipse:(NSString *)macId {
   return [[[EllipseManager shared].locks filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"macId = %@", macId]] firstObject];

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,8 +20,8 @@
 		9D60C084216C567EFF8CAA82 /* libPods-RNLattisSDKTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F88FC396C7C7AC098E8FE003 /* libPods-RNLattisSDKTests.a */; };
 		A7BE7AADB7BEA71576101137 /* libPods-RNLattisSDK-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 234643F071E7B32987A2E559 /* libPods-RNLattisSDK-tvOSTests.a */; };
 		C1678D3EECB89AFFF4A7D4AA /* libPods-RNLattisSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45ACB2F3BE455591C914776E /* libPods-RNLattisSDK.a */; };
-		F1D90B1123ACF9490015BE71 /* LattisSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D90B0D23ACF8F10015BE71 /* LattisSDK.framework */; };
-		F1D90B1223ACF9490015BE71 /* LattisSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1D90B0D23ACF8F10015BE71 /* LattisSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F1465559258B4AD300CA5340 /* LattisSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F146554E258B4A9500CA5340 /* LattisSDK.xcframework */; };
+		F146555A258B4AD300CA5340 /* LattisSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F146554E258B4A9500CA5340 /* LattisSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F1D90B1423ACF94B0015BE71 /* Oval.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1D90B0E23ACF8F10015BE71 /* Oval.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F1D90B1523ACF9980015BE71 /* Oval.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D90B0E23ACF8F10015BE71 /* Oval.framework */; };
 		F1D90B4823ACFF3E0015BE71 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D90B3B23ACFBBA0015BE71 /* CryptoSwift.framework */; };
@@ -149,7 +149,7 @@
 				F1D90B5923ACFF400015BE71 /* KeychainSwift.framework in Embed Frameworks */,
 				F1D90B4923ACFF3E0015BE71 /* CryptoSwift.framework in Embed Frameworks */,
 				F1D90B1423ACF94B0015BE71 /* Oval.framework in Embed Frameworks */,
-				F1D90B1223ACF9490015BE71 /* LattisSDK.framework in Embed Frameworks */,
+				F146555A258B4AD300CA5340 /* LattisSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,7 +183,7 @@
 		C58B24C278F87B238C3964DC /* Pods-RNLattisSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNLattisSDK.debug.xcconfig"; path = "Target Support Files/Pods-RNLattisSDK/Pods-RNLattisSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F1D90B0D23ACF8F10015BE71 /* LattisSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LattisSDK.framework; path = ../../../LattisSDK.framework; sourceTree = "<group>"; };
+		F146554E258B4A9500CA5340 /* LattisSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LattisSDK.xcframework; path = ../../../LattisSDK.xcframework; sourceTree = "<group>"; };
 		F1D90B0E23ACF8F10015BE71 /* Oval.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Oval.framework; path = ../../../Oval.framework; sourceTree = "<group>"; };
 		F1D90B1623ACFBA80015BE71 /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "../../keychain-swift/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
 		F1D90B3223ACFBBA0015BE71 /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = ../../CryptoSwift/CryptoSwift.xcodeproj; sourceTree = "<group>"; };
@@ -207,8 +207,8 @@
 			files = (
 				F1D90B5823ACFF400015BE71 /* KeychainSwift.framework in Frameworks */,
 				F1D90B1523ACF9980015BE71 /* Oval.framework in Frameworks */,
-				F1D90B1123ACF9490015BE71 /* LattisSDK.framework in Frameworks */,
 				F1D90B4823ACFF3E0015BE71 /* CryptoSwift.framework in Frameworks */,
+				F1465559258B4AD300CA5340 /* LattisSDK.xcframework in Frameworks */,
 				C1678D3EECB89AFFF4A7D4AA /* libPods-RNLattisSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +268,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F1D90B0D23ACF8F10015BE71 /* LattisSDK.framework */,
+				F146554E258B4A9500CA5340 /* LattisSDK.xcframework */,
 				F1D90B0E23ACF8F10015BE71 /* Oval.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
@@ -445,7 +445,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -470,10 +470,9 @@
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "RNLattisSDK" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -860,8 +859,12 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = RNLattisSDKTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -881,8 +884,12 @@
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 4WD59CZ9Z6;
 				INFOPLIST_FILE = RNLattisSDKTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -908,8 +915,11 @@
 					"$(PROJECT_DIR)/../../../",
 				);
 				INFOPLIST_FILE = RNLattisSDK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -935,8 +945,11 @@
 					"$(PROJECT_DIR)/../../../",
 				);
 				INFOPLIST_FILE = RNLattisSDK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -963,7 +976,10 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNLattisSDK-tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -973,7 +989,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
 		};
@@ -991,7 +1007,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNLattisSDK-tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1001,7 +1020,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Release;
 		};
@@ -1018,7 +1037,11 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNLattisSDK-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1028,7 +1051,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNLattisSDK-tvOS.app/RNLattisSDK-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 10.1;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
 		};
@@ -1045,7 +1068,11 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNLattisSDK-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1055,7 +1082,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNLattisSDK-tvOS.app/RNLattisSDK-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 10.1;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Release;
 		};
@@ -1063,6 +1090,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1081,6 +1109,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1105,7 +1134,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1116,6 +1145,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1134,6 +1164,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1151,7 +1182,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
