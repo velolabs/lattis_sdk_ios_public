@@ -4,13 +4,25 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Frameworks/KeychainSwift.framework/Info.plist</key>
+		<data>
+		4afm8QrbAoML+VugQ1NmuVDLsW0=
+		</data>
+		<key>Frameworks/KeychainSwift.framework/KeychainSwift</key>
+		<data>
+		+ZtoknLAXSyC5JlIPWR1itJEf9k=
+		</data>
+		<key>Frameworks/KeychainSwift.framework/_CodeSignature/CodeResources</key>
+		<data>
+		W6UYsO2/N5oMZaXNjQboA54hmFA=
+		</data>
 		<key>Frameworks/OvalAPI.framework/Info.plist</key>
 		<data>
 		r4mj/13DYgFfh3gdYF20dhN3r38=
 		</data>
 		<key>Frameworks/OvalAPI.framework/OvalAPI</key>
 		<data>
-		HJEfMcIDoZNQhzoqVGZO6AmXqoQ=
+		tD40JxjdE3P07MPE92OcsaHVm6M=
 		</data>
 		<key>Frameworks/OvalAPI.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -95,6 +107,39 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Frameworks/KeychainSwift.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4afm8QrbAoML+VugQ1NmuVDLsW0=
+			</data>
+			<key>hash2</key>
+			<data>
+			c5526Yy4uYm8l9zk/T8RS8cAaK3ktxTfARPCk1MykE8=
+			</data>
+		</dict>
+		<key>Frameworks/KeychainSwift.framework/KeychainSwift</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+ZtoknLAXSyC5JlIPWR1itJEf9k=
+			</data>
+			<key>hash2</key>
+			<data>
+			FOwoOgAu7TUKjcQ9EPSVAxuo9GdMFWWZex1kpfI/P7c=
+			</data>
+		</dict>
+		<key>Frameworks/KeychainSwift.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			W6UYsO2/N5oMZaXNjQboA54hmFA=
+			</data>
+			<key>hash2</key>
+			<data>
+			HOy3bnW0ipm7wUGGcZ2DBnc3SNSqtEHM+n0NU6xKcNE=
+			</data>
+		</dict>
 		<key>Frameworks/OvalAPI.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
@@ -110,11 +155,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HJEfMcIDoZNQhzoqVGZO6AmXqoQ=
+			tD40JxjdE3P07MPE92OcsaHVm6M=
 			</data>
 			<key>hash2</key>
 			<data>
-			XhiR3RwUGbKKQ45BX7h7z4AS2Y11rndo5kRLlFH+lZM=
+			tdJ8+F6QgiiKS8cP7Fx5gbffmNAPWhJSU05dZC3ZN8I=
 			</data>
 		</dict>
 		<key>Frameworks/OvalAPI.framework/_CodeSignature/CodeResources</key>
