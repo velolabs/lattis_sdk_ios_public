@@ -1,22 +1,12 @@
 PODS:
   - GradientCircularProgress (3.13.0)
-  - KeychainSwift (19.0.0)
-  - LattisSDK (2.2.3)
 
 DEPENDENCIES:
   - GradientCircularProgress (from `https://github.com/keygx/GradientCircularProgress`)
-  - KeychainSwift
-  - LattisSDK (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - KeychainSwift
 
 EXTERNAL SOURCES:
   GradientCircularProgress:
     :git: https://github.com/keygx/GradientCircularProgress
-  LattisSDK:
-    :path: "../"
 
 CHECKOUT OPTIONS:
   GradientCircularProgress:
@@ -25,9 +15,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   GradientCircularProgress: f5a04b862adc1fbafbd21c0ff450ed7d74d1926e
-  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
-  LattisSDK: bf63695e2f9e9f808ed472b3583c99cbc9efd4d6
 
-PODFILE CHECKSUM: cdb56d711186ff8a06d66348a42c818a014a7c51
+PODFILE CHECKSUM: c43b11a4c9c1de1a0af19acbf34279901b23a49f
 
 COCOAPODS: 1.10.0

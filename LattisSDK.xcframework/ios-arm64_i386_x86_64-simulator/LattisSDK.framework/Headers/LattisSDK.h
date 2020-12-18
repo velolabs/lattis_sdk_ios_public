@@ -2,11 +2,10 @@
 //  LattisSDK.h
 //  LattisSDK
 //
-//  Created by Ravil Khusainov on 1/30/18.
-//  Copyright © 2018 Lattis Inc. All rights reserved.
+//  Created by Ravil Khusainov on 17.12.2020.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for LattisSDK.
 FOUNDATION_EXPORT double LattisSDKVersionNumber;

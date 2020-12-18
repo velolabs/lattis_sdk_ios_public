@@ -306,8 +306,6 @@ enum LSEllipseSecurity : NSInteger;
 
 SWIFT_CLASS("_TtC9LattisSDK14EllipseManager")
 @interface EllipseManager : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EllipseManager * _Nonnull shared;)
-+ (EllipseManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 /// Actual list of avaliable locks
 @property (nonatomic, readonly, copy) NSArray<Ellipse *> * _Nonnull locks;
 /// Check BLE status
@@ -322,6 +320,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable sec
 - (void)stopScan;
 - (void)disconnectWithEllipse:(Ellipse * _Nonnull)ellipse;
 - (void)clean;
+@end
+
+
+@interface EllipseManager (SWIFT_EXTENSION(LattisSDK))
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EllipseManager * _Nonnull shared;)
++ (EllipseManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @protocol LSEllipseManagerDelegate;
@@ -704,8 +708,6 @@ enum LSEllipseSecurity : NSInteger;
 
 SWIFT_CLASS("_TtC9LattisSDK14EllipseManager")
 @interface EllipseManager : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EllipseManager * _Nonnull shared;)
-+ (EllipseManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 /// Actual list of avaliable locks
 @property (nonatomic, readonly, copy) NSArray<Ellipse *> * _Nonnull locks;
 /// Check BLE status
@@ -720,6 +722,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable sec
 - (void)stopScan;
 - (void)disconnectWithEllipse:(Ellipse * _Nonnull)ellipse;
 - (void)clean;
+@end
+
+
+@interface EllipseManager (SWIFT_EXTENSION(LattisSDK))
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EllipseManager * _Nonnull shared;)
++ (EllipseManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @protocol LSEllipseManagerDelegate;
