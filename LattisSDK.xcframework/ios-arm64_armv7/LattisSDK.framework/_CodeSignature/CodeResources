@@ -4,6 +4,18 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Frameworks/OvalAPI.framework/Info.plist</key>
+		<data>
+		r4mj/13DYgFfh3gdYF20dhN3r38=
+		</data>
+		<key>Frameworks/OvalAPI.framework/OvalAPI</key>
+		<data>
+		HJEfMcIDoZNQhzoqVGZO6AmXqoQ=
+		</data>
+		<key>Frameworks/OvalAPI.framework/_CodeSignature/CodeResources</key>
+		<data>
+		LunDflUYWSZsCREL582LnQw6Bvw=
+		</data>
 		<key>Headers/LattisSDK-Swift.h</key>
 		<data>
 		aXTrAfEzQDakz8MVz/m17+vi+jc=
@@ -83,6 +95,39 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Frameworks/OvalAPI.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			r4mj/13DYgFfh3gdYF20dhN3r38=
+			</data>
+			<key>hash2</key>
+			<data>
+			8ifQIZIAAS3WfCbooap+dj+DMGCC8KnQJeWaV+yZbYs=
+			</data>
+		</dict>
+		<key>Frameworks/OvalAPI.framework/OvalAPI</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HJEfMcIDoZNQhzoqVGZO6AmXqoQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			XhiR3RwUGbKKQ45BX7h7z4AS2Y11rndo5kRLlFH+lZM=
+			</data>
+		</dict>
+		<key>Frameworks/OvalAPI.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LunDflUYWSZsCREL582LnQw6Bvw=
+			</data>
+			<key>hash2</key>
+			<data>
+			bQB9ViNLRzBvtKGpvi6UtxhUNVi2MBaoDr780pMWaEI=
+			</data>
+		</dict>
 		<key>Headers/LattisSDK-Swift.h</key>
 		<dict>
 			<key>hash</key>
