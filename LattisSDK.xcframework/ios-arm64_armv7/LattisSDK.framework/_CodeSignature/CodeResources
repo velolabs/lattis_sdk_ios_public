@@ -10,7 +10,7 @@
 		</data>
 		<key>Frameworks/KeychainSwift.framework/KeychainSwift</key>
 		<data>
-		+ZtoknLAXSyC5JlIPWR1itJEf9k=
+		fqR/1Wfx1wpKV16sRPAQoOqrzqc=
 		</data>
 		<key>Frameworks/KeychainSwift.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Frameworks/OvalAPI.framework/OvalAPI</key>
 		<data>
-		tD40JxjdE3P07MPE92OcsaHVm6M=
+		vTcgN7BQ5x8rDKT3uzbALCfFDIY=
 		</data>
 		<key>Frameworks/OvalAPI.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -122,11 +122,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+ZtoknLAXSyC5JlIPWR1itJEf9k=
+			fqR/1Wfx1wpKV16sRPAQoOqrzqc=
 			</data>
 			<key>hash2</key>
 			<data>
-			FOwoOgAu7TUKjcQ9EPSVAxuo9GdMFWWZex1kpfI/P7c=
+			4iRSGwSuIlGI2xFK1ARyphgwWc+Dax+XK/n1SsaJzJU=
 			</data>
 		</dict>
 		<key>Frameworks/KeychainSwift.framework/_CodeSignature/CodeResources</key>
@@ -155,11 +155,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tD40JxjdE3P07MPE92OcsaHVm6M=
+			vTcgN7BQ5x8rDKT3uzbALCfFDIY=
 			</data>
 			<key>hash2</key>
 			<data>
-			tdJ8+F6QgiiKS8cP7Fx5gbffmNAPWhJSU05dZC3ZN8I=
+			gTSM5WhoEUtbjQLOjXEb2c8V/YmzBwx0bkEelEgLe24=
 			</data>
 		</dict>
 		<key>Frameworks/OvalAPI.framework/_CodeSignature/CodeResources</key>

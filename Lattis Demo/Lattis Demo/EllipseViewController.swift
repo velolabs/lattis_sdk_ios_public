@@ -36,7 +36,7 @@ class EllipseViewController: UIViewController {
     @IBOutlet weak var pinCodeLabel: UILabel!
     
     var ellipse: Ellipse!
-    fileprivate let network = EllipseManager.shared.network
+    fileprivate let api = EllipseManager.shared.api!
     
     fileprivate var progressView: GradientCircularProgress?
     fileprivate var isAutoLockEnabled: Bool = false {
@@ -85,7 +85,7 @@ class EllipseViewController: UIViewController {
         picker.addAction(.init(title: "Cancel", style: .cancel, handler: nil))
         present(picker, animated: true, completion: nil)
 //        progress(text: "Checking")
-//        network.firmvareChangeLog(for: nil, success: { (log) in
+//        api.firmvareChangeLog(for: nil, success: { (log) in
 //            self.hideProgress()
 //            self.show(log: log)
 //        }, fail: { (error) in
@@ -106,7 +106,7 @@ class EllipseViewController: UIViewController {
             present(picker, animated: true, completion: nil)
         }
         self.progress(text: "Checking")
-        network.firmvareVersions { (result) in
+        api.firmvareVersions { (result) in
             self.hideProgress()
             switch result {
             case .success(let versions):
@@ -119,7 +119,7 @@ class EllipseViewController: UIViewController {
     
     fileprivate func getLog(version: String) {
         progress(text: version)
-        network.firmvareChangeLog(for: version) { (result) in
+        api.firmvareChangeLog(for: version) { (result) in
             self.hideProgress()
             switch result {
             case .success(let log):
@@ -135,7 +135,7 @@ class EllipseViewController: UIViewController {
         let alert = UIAlertController(title: version, message: str, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { (_) in
             self.progessRatio()
-            self.network.firmvare(version: version) { [weak self] (result) in
+            self.api.firmvare(version: version) { [weak self] (result) in
                 switch result {
                 case .success(let fw):
                     self?.ellipse.update(firmware: fw)
@@ -176,7 +176,7 @@ class EllipseViewController: UIViewController {
     }
     
     fileprivate func getPin() {
-        network.getPinCode(forLockWith: ellipse.macId) { (result) in
+        api.getPinCode(forLockWith: ellipse.macId) { (result) in
             switch result {
             case .success(let pin):
                 let chars = pin.compactMap(Pin.init).map({$0.char})
@@ -249,7 +249,7 @@ extension EllipseViewController: TheftPresentable, CrashPresentable {
 extension EllipseViewController: PinViewControllerDelegate {
     func save(pin: [Pin], completion: @escaping (Error?) -> ()) {
         progress(text: "Saving Pin code")
-        network.save(pinCode: pin.map({$0.rawValue}), forLock: ellipse.macId) { result in
+        api.save(pinCode: pin.map({$0.rawValue}), forLock: ellipse.macId) { result in
             self.hideProgress()
             switch result {
             case .success:

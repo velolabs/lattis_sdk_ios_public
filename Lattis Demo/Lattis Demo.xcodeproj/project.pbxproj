@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,6 @@
 		F141D8A421493A56001B6126 /* EllipseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141D8A021493A56001B6126 /* EllipseTableCell.swift */; };
 		F141D8A521493A56001B6126 /* EllipseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141D8A121493A56001B6126 /* EllipseViewController.swift */; };
 		F141D8A721493A60001B6126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F141D8A621493A60001B6126 /* Main.storyboard */; };
-		F146564A258C631B00CA5340 /* LattisSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F1465649258C631B00CA5340 /* LattisSDK */; };
 		F17AAA45202657010062A679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17AAA44202657010062A679 /* AppDelegate.swift */; };
 		F17AAA4C202657010062A679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17AAA4B202657010062A679 /* Assets.xcassets */; };
 		F17AAA4F202657010062A679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17AAA4D202657010062A679 /* LaunchScreen.storyboard */; };
@@ -56,7 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F146564A258C631B00CA5340 /* LattisSDK in Frameworks */,
 				57C9BAF2D725E8EB18BCB723 /* Pods_Lattis_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,9 +134,6 @@
 			dependencies = (
 			);
 			name = "Lattis Demo";
-			packageProductDependencies = (
-				F1465649258C631B00CA5340 /* LattisSDK */,
-			);
 			productName = "Lattis Demo";
 			productReference = F17AAA41202657010062A679 /* Lattis Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -174,9 +169,6 @@
 				Base,
 			);
 			mainGroup = F17AAA38202657010062A679;
-			packageReferences = (
-				F1465648258C631B00CA5340 /* XCRemoteSwiftPackageReference "lattis_sdk_ios_public" */,
-			);
 			productRefGroup = F17AAA42202657010062A679 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -209,10 +201,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Lattis Demo/Pods-Lattis Demo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GradientCircularProgress/GradientCircularProgress.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/LattisSDK/LattisSDK.framework/LattisSDK",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientCircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LattisSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -374,8 +368,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -393,10 +386,7 @@
 				);
 				INFOPLIST_FILE = "Lattis Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.lattis.Lattis-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -417,10 +407,7 @@
 				);
 				INFOPLIST_FILE = "Lattis Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.lattis.Lattis-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -450,25 +437,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		F1465648258C631B00CA5340 /* XCRemoteSwiftPackageReference "lattis_sdk_ios_public" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/velolabs/lattis_sdk_ios_public.git";
-			requirement = {
-				branch = spm;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F1465649258C631B00CA5340 /* LattisSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F1465648258C631B00CA5340 /* XCRemoteSwiftPackageReference "lattis_sdk_ios_public" */;
-			productName = LattisSDK;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F17AAA39202657010062A679 /* Project object */;
 }
