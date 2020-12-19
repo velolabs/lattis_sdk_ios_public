@@ -16,24 +16,9 @@
 		F17AAA45202657010062A679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17AAA44202657010062A679 /* AppDelegate.swift */; };
 		F17AAA4C202657010062A679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17AAA4B202657010062A679 /* Assets.xcassets */; };
 		F17AAA4F202657010062A679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17AAA4D202657010062A679 /* LaunchScreen.storyboard */; };
-		F17E1559258D7E2300371DFF /* LattisSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17E1558258D7E2300371DFF /* LattisSDK.xcframework */; };
-		F17E155A258D7E2300371DFF /* LattisSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F17E1558258D7E2300371DFF /* LattisSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F191FB67223A9050002A8AB7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F191FB66223A9050002A8AB7 /* README.md */; };
+		F1DE151A258DE57D00792C79 /* LattisSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F1DE1519258DE57D00792C79 /* LattisSDK */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F17AAA5C202657390062A679 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F17E155A258D7E2300371DFF /* LattisSDK.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2F2C1BBA6B6531122EB2B62B /* Pods-Lattis Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lattis Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lattis Demo/Pods-Lattis Demo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -49,7 +34,6 @@
 		F17AAA4B202657010062A679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F17AAA4E202657010062A679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F17AAA50202657010062A679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F17E1558258D7E2300371DFF /* LattisSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LattisSDK.xcframework; path = ../LattisSDK.xcframework; sourceTree = "<group>"; };
 		F191FB66223A9050002A8AB7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F1E807C7212D96AE0031F06A /* LattisSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = LattisSDK.podspec; path = ../LattisSDK.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,8 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1DE151A258DE57D00792C79 /* LattisSDK in Frameworks */,
 				57C9BAF2D725E8EB18BCB723 /* Pods_Lattis_Demo.framework in Frameworks */,
-				F17E1559258D7E2300371DFF /* LattisSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +54,6 @@
 		3CD0D800CF088C544F473BCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F17E1558258D7E2300371DFF /* LattisSDK.xcframework */,
 				7B2786DB7640658FDCA65458 /* Pods_Lattis_Demo.framework */,
 			);
 			name = Frameworks;
@@ -132,7 +115,6 @@
 				F17AAA3D202657010062A679 /* Sources */,
 				F17AAA3E202657010062A679 /* Frameworks */,
 				F17AAA3F202657010062A679 /* Resources */,
-				F17AAA5C202657390062A679 /* Embed Frameworks */,
 				C4C31583966F110A7F1020DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -140,6 +122,9 @@
 			dependencies = (
 			);
 			name = "Lattis Demo";
+			packageProductDependencies = (
+				F1DE1519258DE57D00792C79 /* LattisSDK */,
+			);
 			productName = "Lattis Demo";
 			productReference = F17AAA41202657010062A679 /* Lattis Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +160,9 @@
 				Base,
 			);
 			mainGroup = F17AAA38202657010062A679;
+			packageReferences = (
+				F1DE1518258DE57D00792C79 /* XCRemoteSwiftPackageReference "lattis_sdk_ios_public" */,
+			);
 			productRefGroup = F17AAA42202657010062A679 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -452,6 +440,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1DE1518258DE57D00792C79 /* XCRemoteSwiftPackageReference "lattis_sdk_ios_public" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/velolabs/lattis_sdk_ios_public.git";
+			requirement = {
+				branch = spm;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1DE1519258DE57D00792C79 /* LattisSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1DE1518258DE57D00792C79 /* XCRemoteSwiftPackageReference "lattis_sdk_ios_public" */;
+			productName = LattisSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F17AAA39202657010062A679 /* Project object */;
 }

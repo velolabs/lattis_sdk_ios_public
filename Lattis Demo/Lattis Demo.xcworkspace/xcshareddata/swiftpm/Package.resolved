@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "LattisSDK",
+        "repositoryURL": "https://github.com/velolabs/lattis_sdk_ios_public.git",
+        "state": {
+          "branch": "spm",
+          "revision": "22660328e9dbb964dd258a2f7ffd9ad937a0b24a",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

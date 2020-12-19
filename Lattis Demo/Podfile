@@ -8,5 +8,4 @@ target 'Lattis Demo' do
   # Pods for Lattis Demo
   pod 'GradientCircularProgress', :git => 'https://github.com/keygx/GradientCircularProgress'
 #  pod 'LattisSDK', :path => '../'
-#  pod 'KeychainSwift'
 end

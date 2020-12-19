@@ -1,5 +1,5 @@
 # Lattis SDK for iOS
-![Xcode](https://img.shields.io/badge/Xcode-11-blue.svg) ![Swift](https://img.shields.io/badge/Swift-5.1-orange.svg) ![platform](https://img.shields.io/badge/platform-iOS%2010.0%2B-lightgrey.svg)
+![Xcode](https://img.shields.io/badge/Xcode-12-blue.svg) ![Swift](https://img.shields.io/badge/Swift-5.3-orange.svg) ![platform](https://img.shields.io/badge/platform-iOS%2010.0%2B-lightgrey.svg)
 ## Dependencies
 
 * Oval.framework (Lattis networking API)
@@ -24,6 +24,8 @@ pod install
 > If you want to use previous version use tag `v1.1.5` or
 
 `pod 'LattisSDK', '1.1.5'`
+
+### SPM supported
 
 ## Usage
 
