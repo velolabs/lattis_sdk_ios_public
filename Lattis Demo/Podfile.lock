@@ -1,16 +1,12 @@
 PODS:
   - GradientCircularProgress (3.13.0)
-  - LattisSDK (2.2.6)
 
 DEPENDENCIES:
   - GradientCircularProgress (from `https://github.com/keygx/GradientCircularProgress`)
-  - LattisSDK (from `../`)
 
 EXTERNAL SOURCES:
   GradientCircularProgress:
     :git: https://github.com/keygx/GradientCircularProgress
-  LattisSDK:
-    :path: "../"
 
 CHECKOUT OPTIONS:
   GradientCircularProgress:
@@ -19,8 +15,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   GradientCircularProgress: f5a04b862adc1fbafbd21c0ff450ed7d74d1926e
-  LattisSDK: 543649c077914be1a35f2bb5a7748b53cdbe6535
 
-PODFILE CHECKSUM: 07055626d6122778fe52750b75d9625a40ce1d8e
+PODFILE CHECKSUM: c43b11a4c9c1de1a0af19acbf34279901b23a49f
 
 COCOAPODS: 1.10.0

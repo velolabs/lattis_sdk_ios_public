@@ -4,9 +4,7 @@
 import CommonCrypto
 import CoreBluetooth
 import Foundation
-import KeychainSwift
 @_exported import LattisSDK
-import OvalAPI
 import Swift
 extension Ellipse {
   public struct Metadata {

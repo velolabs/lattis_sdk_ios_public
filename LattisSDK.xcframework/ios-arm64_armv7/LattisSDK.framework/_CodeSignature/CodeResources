@@ -10,7 +10,7 @@
 		</data>
 		<key>Frameworks/KeychainSwift.framework/KeychainSwift</key>
 		<data>
-		fqR/1Wfx1wpKV16sRPAQoOqrzqc=
+		FBtP52QLhyRveYTaigkxWJ0HrXY=
 		</data>
 		<key>Frameworks/KeychainSwift.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Frameworks/OvalAPI.framework/OvalAPI</key>
 		<data>
-		vTcgN7BQ5x8rDKT3uzbALCfFDIY=
+		TY2scuvFJLe3FAL/QRJDegGvfO4=
 		</data>
 		<key>Frameworks/OvalAPI.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/arm.swiftinterface</key>
 		<data>
-		u7VgV0cP+qaruhXJWy1JHieEzoE=
+		aaHMG4+zAxTfYpVDHLzpTpERP1A=
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		EkipkSo0GKh4EG+w2/96hOQSsRk=
+		ts2Bvgjrp92cwFUclpFmSNqaMik=
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -58,11 +58,11 @@
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Yf+tw1wW5G5j68s9Gbb1RIeGqjs=
+		vNDFKpFBgVgkKzQhJkdBwqenIY8=
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		iNkLjVxn8peSaWIq6nzGmEVq/So=
+		L5ZeiXnY6sLv6bfr9IlD/y9Le0c=
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -70,11 +70,11 @@
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		Yf+tw1wW5G5j68s9Gbb1RIeGqjs=
+		vNDFKpFBgVgkKzQhJkdBwqenIY8=
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		iNkLjVxn8peSaWIq6nzGmEVq/So=
+		L5ZeiXnY6sLv6bfr9IlD/y9Le0c=
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -82,11 +82,11 @@
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<data>
-		u7VgV0cP+qaruhXJWy1JHieEzoE=
+		aaHMG4+zAxTfYpVDHLzpTpERP1A=
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		EkipkSo0GKh4EG+w2/96hOQSsRk=
+		ts2Bvgjrp92cwFUclpFmSNqaMik=
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/armv7.swiftdoc</key>
 		<data>
@@ -94,11 +94,11 @@
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/armv7.swiftinterface</key>
 		<data>
-		u7VgV0cP+qaruhXJWy1JHieEzoE=
+		aaHMG4+zAxTfYpVDHLzpTpERP1A=
 		</data>
 		<key>Modules/LattisSDK.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		EkipkSo0GKh4EG+w2/96hOQSsRk=
+		ts2Bvgjrp92cwFUclpFmSNqaMik=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -122,11 +122,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fqR/1Wfx1wpKV16sRPAQoOqrzqc=
+			FBtP52QLhyRveYTaigkxWJ0HrXY=
 			</data>
 			<key>hash2</key>
 			<data>
-			4iRSGwSuIlGI2xFK1ARyphgwWc+Dax+XK/n1SsaJzJU=
+			HFFrNfBkkl/4nAmZ9y4Gj51E1fCLiRzOKj1tnHJhK80=
 			</data>
 		</dict>
 		<key>Frameworks/KeychainSwift.framework/_CodeSignature/CodeResources</key>
@@ -155,11 +155,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vTcgN7BQ5x8rDKT3uzbALCfFDIY=
+			TY2scuvFJLe3FAL/QRJDegGvfO4=
 			</data>
 			<key>hash2</key>
 			<data>
-			gTSM5WhoEUtbjQLOjXEb2c8V/YmzBwx0bkEelEgLe24=
+			lRtQ+fspq/AedBVyBQQwYcuvpZmacqMhvyMNmNmVEEs=
 			</data>
 		</dict>
 		<key>Frameworks/OvalAPI.framework/_CodeSignature/CodeResources</key>
@@ -210,22 +210,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			u7VgV0cP+qaruhXJWy1JHieEzoE=
+			aaHMG4+zAxTfYpVDHLzpTpERP1A=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZS1iBRN+8l+aD2DbyAStw2UsQQXAhAm+P2OrMNhRMeY=
+			lHcTGEcEEDtvoJU5oLIP+Lo1ywEfYJy10vAX8OzznvU=
 			</data>
 		</dict>
 		<key>Modules/LattisSDK.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EkipkSo0GKh4EG+w2/96hOQSsRk=
+			ts2Bvgjrp92cwFUclpFmSNqaMik=
 			</data>
 			<key>hash2</key>
 			<data>
-			9hPjdOtuCoBbE69NHu4QkhQe3mq16dBeJUKvnbmnNz8=
+			O61VxS6HALxL3DeuSxsnx4Q30ygE52ec+9ERprtCpTg=
 			</data>
 		</dict>
 		<key>Modules/LattisSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -243,22 +243,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Yf+tw1wW5G5j68s9Gbb1RIeGqjs=
+			vNDFKpFBgVgkKzQhJkdBwqenIY8=
 			</data>
 			<key>hash2</key>
 			<data>
-			mzc3pfuZYTUncIaOXGFaT+UmJNqvo3CjlBSTOrW6Jek=
+			4ffjhRHxL5iV6Yre3M1jmToTCi3XvpfoOP2M5uMXCm4=
 			</data>
 		</dict>
 		<key>Modules/LattisSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iNkLjVxn8peSaWIq6nzGmEVq/So=
+			L5ZeiXnY6sLv6bfr9IlD/y9Le0c=
 			</data>
 			<key>hash2</key>
 			<data>
-			bWjydsjL1f/XYb9/8sk1vstVZvUQq2VNULPZ4KLLR0c=
+			pU1Yf+IBOpcxBIyULdpKhqq7sMYZc14jae/VaITCvx0=
 			</data>
 		</dict>
 		<key>Modules/LattisSDK.swiftmodule/arm64.swiftdoc</key>
@@ -276,22 +276,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Yf+tw1wW5G5j68s9Gbb1RIeGqjs=
+			vNDFKpFBgVgkKzQhJkdBwqenIY8=
 			</data>
 			<key>hash2</key>
 			<data>
-			mzc3pfuZYTUncIaOXGFaT+UmJNqvo3CjlBSTOrW6Jek=
+			4ffjhRHxL5iV6Yre3M1jmToTCi3XvpfoOP2M5uMXCm4=
 			</data>
 		</dict>
 		<key>Modules/LattisSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iNkLjVxn8peSaWIq6nzGmEVq/So=
+			L5ZeiXnY6sLv6bfr9IlD/y9Le0c=
 			</data>
 			<key>hash2</key>
 			<data>
-			bWjydsjL1f/XYb9/8sk1vstVZvUQq2VNULPZ4KLLR0c=
+			pU1Yf+IBOpcxBIyULdpKhqq7sMYZc14jae/VaITCvx0=
 			</data>
 		</dict>
 		<key>Modules/LattisSDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -309,22 +309,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			u7VgV0cP+qaruhXJWy1JHieEzoE=
+			aaHMG4+zAxTfYpVDHLzpTpERP1A=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZS1iBRN+8l+aD2DbyAStw2UsQQXAhAm+P2OrMNhRMeY=
+			lHcTGEcEEDtvoJU5oLIP+Lo1ywEfYJy10vAX8OzznvU=
 			</data>
 		</dict>
 		<key>Modules/LattisSDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EkipkSo0GKh4EG+w2/96hOQSsRk=
+			ts2Bvgjrp92cwFUclpFmSNqaMik=
 			</data>
 			<key>hash2</key>
 			<data>
-			9hPjdOtuCoBbE69NHu4QkhQe3mq16dBeJUKvnbmnNz8=
+			O61VxS6HALxL3DeuSxsnx4Q30ygE52ec+9ERprtCpTg=
 			</data>
 		</dict>
 		<key>Modules/LattisSDK.swiftmodule/armv7.swiftdoc</key>
@@ -342,22 +342,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			u7VgV0cP+qaruhXJWy1JHieEzoE=
+			aaHMG4+zAxTfYpVDHLzpTpERP1A=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZS1iBRN+8l+aD2DbyAStw2UsQQXAhAm+P2OrMNhRMeY=
+			lHcTGEcEEDtvoJU5oLIP+Lo1ywEfYJy10vAX8OzznvU=
 			</data>
 		</dict>
 		<key>Modules/LattisSDK.swiftmodule/armv7.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EkipkSo0GKh4EG+w2/96hOQSsRk=
+			ts2Bvgjrp92cwFUclpFmSNqaMik=
 			</data>
 			<key>hash2</key>
 			<data>
-			9hPjdOtuCoBbE69NHu4QkhQe3mq16dBeJUKvnbmnNz8=
+			O61VxS6HALxL3DeuSxsnx4Q30ygE52ec+9ERprtCpTg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
