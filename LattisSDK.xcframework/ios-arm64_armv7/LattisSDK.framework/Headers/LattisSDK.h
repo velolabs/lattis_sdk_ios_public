@@ -2,7 +2,7 @@
 //  LattisSDK.h
 //  LattisSDK
 //
-//  Created by Ravil Khusainov on 17.12.2020.
+//  Created by Ravil Khusainov on 08.02.2021.
 //
 
 #import <Foundation/Foundation.h>

@@ -306,6 +306,8 @@ enum LSEllipseSecurity : NSInteger;
 
 SWIFT_CLASS("_TtC9LattisSDK14EllipseManager")
 @interface EllipseManager : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EllipseManager * _Nonnull uninitialized;)
++ (EllipseManager * _Nonnull)uninitialized SWIFT_WARN_UNUSED_RESULT;
 /// Actual list of avaliable locks
 @property (nonatomic, readonly, copy) NSArray<Ellipse *> * _Nonnull locks;
 /// Check BLE status
@@ -394,6 +396,8 @@ typedef SWIFT_ENUM(NSInteger, LSEllipseValue, open) {
   LSEllipseValueMagnetAutoLockEnabled = 4,
   LSEllipseValueBatteryLevel = 5,
 };
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
@@ -708,6 +712,8 @@ enum LSEllipseSecurity : NSInteger;
 
 SWIFT_CLASS("_TtC9LattisSDK14EllipseManager")
 @interface EllipseManager : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) EllipseManager * _Nonnull uninitialized;)
++ (EllipseManager * _Nonnull)uninitialized SWIFT_WARN_UNUSED_RESULT;
 /// Actual list of avaliable locks
 @property (nonatomic, readonly, copy) NSArray<Ellipse *> * _Nonnull locks;
 /// Check BLE status
@@ -796,6 +802,8 @@ typedef SWIFT_ENUM(NSInteger, LSEllipseValue, open) {
   LSEllipseValueMagnetAutoLockEnabled = 4,
   LSEllipseValueBatteryLevel = 5,
 };
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
