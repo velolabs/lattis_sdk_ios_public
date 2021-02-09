@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		57C9BAF2D725E8EB18BCB723 /* Pods_Lattis_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2786DB7640658FDCA65458 /* Pods_Lattis_Demo.framework */; };
+		F1217C0B25D302F800144CC2 /* LattisSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F1217C0A25D302F800144CC2 /* LattisSDK */; };
 		F141D8A221493A56001B6126 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141D89E21493A56001B6126 /* RootViewController.swift */; };
 		F141D8A321493A56001B6126 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141D89F21493A56001B6126 /* PinViewController.swift */; };
 		F141D8A421493A56001B6126 /* EllipseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141D8A021493A56001B6126 /* EllipseTableCell.swift */; };
@@ -17,7 +18,6 @@
 		F17AAA4C202657010062A679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17AAA4B202657010062A679 /* Assets.xcassets */; };
 		F17AAA4F202657010062A679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17AAA4D202657010062A679 /* LaunchScreen.storyboard */; };
 		F191FB67223A9050002A8AB7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F191FB66223A9050002A8AB7 /* README.md */; };
-		F1DE151A258DE57D00792C79 /* LattisSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F1DE1519258DE57D00792C79 /* LattisSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1DE151A258DE57D00792C79 /* LattisSDK in Frameworks */,
+				F1217C0B25D302F800144CC2 /* LattisSDK in Frameworks */,
 				57C9BAF2D725E8EB18BCB723 /* Pods_Lattis_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,7 +123,7 @@
 			);
 			name = "Lattis Demo";
 			packageProductDependencies = (
-				F1DE1519258DE57D00792C79 /* LattisSDK */,
+				F1217C0A25D302F800144CC2 /* LattisSDK */,
 			);
 			productName = "Lattis Demo";
 			productReference = F17AAA41202657010062A679 /* Lattis Demo.app */;
@@ -161,7 +161,7 @@
 			);
 			mainGroup = F17AAA38202657010062A679;
 			packageReferences = (
-				F1DE1518258DE57D00792C79 /* XCRemoteSwiftPackageReference "lattis_sdk_ios_public" */,
+				F1217C0925D302F800144CC2 /* XCRemoteSwiftPackageReference "lattis_sdk_ios_public" */,
 			);
 			productRefGroup = F17AAA42202657010062A679 /* Products */;
 			projectDirPath = "";
@@ -442,7 +442,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F1DE1518258DE57D00792C79 /* XCRemoteSwiftPackageReference "lattis_sdk_ios_public" */ = {
+		F1217C0925D302F800144CC2 /* XCRemoteSwiftPackageReference "lattis_sdk_ios_public" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/velolabs/lattis_sdk_ios_public.git";
 			requirement = {
@@ -453,9 +453,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F1DE1519258DE57D00792C79 /* LattisSDK */ = {
+		F1217C0A25D302F800144CC2 /* LattisSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F1DE1518258DE57D00792C79 /* XCRemoteSwiftPackageReference "lattis_sdk_ios_public" */;
+			package = F1217C0925D302F800144CC2 /* XCRemoteSwiftPackageReference "lattis_sdk_ios_public" */;
 			productName = LattisSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
